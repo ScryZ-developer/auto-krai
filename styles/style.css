@@ -1,0 +1,100 @@
+html, 
+body {
+  block-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.page {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "cover" 
+  "advantages" 
+  "contacts" 
+  "footer";
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  max-width: 100%;
+  height: 50%;
+  padding: 5px 15px 5px 15px;
+  background-color: gainsboro;
+  color: 
+}
+
+.header__logo-container {
+
+}
+
+.header__logo {
+
+}
+
+.header__logo-image {
+
+}
+
+.header__nav {
+
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav__list-item {
+
+}
+
+.header__rate {
+  display: flex;
+  justify-self: end;
+  font-size: 13px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cover {
+  display: flex;
+}
+
+.cover__title {
+
+}
+
+.cover__subtitle {
+
+}
+
+.advantages {
+  display: flex;
+}
