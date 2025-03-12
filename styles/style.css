@@ -3,6 +3,11 @@ body {
   block-size: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
 }
 
 h1,
@@ -24,6 +29,7 @@ ol {
   list-style: none;
 }
 
+/* Страница сайта */
 .page {
   display: grid;
   grid-template-areas: 
@@ -33,68 +39,322 @@ ol {
   "contacts" 
   "footer";
   font-family: 'Fira Sans Condensed', sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  cursor: default;
+  color: #fff;
 }
 
+/* Шапка сайта */
 .header {
+  position: fixed;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  gap: 40px;
   align-items: center;
-  max-width: 100%;
-  height: 50%;
-  padding: 5px 15px 5px 15px;
-  background-color: gainsboro;
-  color: 
+  padding: 25px 0;
+  border-top: 10px solid #bcfd4c;
+  background-color: #6e6e6e;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  border-bottom: 1px solid #000;  
+  z-index: 10;
 }
 
+header.shrink { 
+  padding: 15px 0;
+  background-color: rgba(110, 110, 110, 0.8);; 
+  backdrop-filter: blur(8px);
+}
+
+/* Логотип */
 .header__logo-container {
-
+  display: block;
+  padding-left: 50px;
 }
 
-.header__logo {
-
-}
-
-.header__logo-image {
-
-}
-
-.header__nav {
-
-}
-
+/* Навигация по сайту */
 .nav__list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
+/* Элементы навигации */
 .nav__list-item {
-
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
+/* Ссылки навигации */
+.nav__list-item-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.nav__list-item-link:hover {
+  text-decoration: underline 1px;
+  text-underline-position: under;
+  color: #bcfd4c;
+  transform: scale(1.04);
+}
+
+/* Курс валюты */
 .header__rate {
   display: flex;
-  justify-self: end;
-  font-size: 13px;
+  justify-content: end;
+  padding-right: 50px;
 }
 
+/* Текст курса валюты */
+.header__rate-text {
+  display: block;
+}
+
+/* Основное содержимое сайта */
 .content {
   display: flex;
   flex-direction: column;
+  background-color: dimgray;
 }
 
+/* Обложка */
 .cover {
+  position: relative;
   display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../images/image-test.jpg) no-repeat center center / cover;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 1); 
+  z-index: 1;
 }
 
+/* Заголовок обложки */
 .cover__title {
-
-}
-
-.cover__subtitle {
-
-}
-
-.advantages {
   display: flex;
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 50px;
+  word-spacing: -8px;
+  cursor: default;
+}
+
+/* Подзаголовок обложки */
+.cover__subtitle {
+  display: flex;
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 19px;
+  word-spacing: -0.5px;
+  margin-bottom: 25px;
+  cursor: default;
+}
+
+.button {
+  border: 0;
+  border-radius: 10px;
+  background-color: #bcfd4c;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Кнопка заказа */
+.button__order {
+  display: flex;
+  font-size: 20px;
+  padding: 15px 30px;
+  transition: transform 0.4s;
+}
+
+.button__order:hover {
+  transform: scale(1.04);
+}
+
+/* Преимущества */
+.advantages {
+  position: relative;
+  height: 100vh;
+  background: url(../images/test-background-1.png) no-repeat center center / cover;
+  z-index: 0;
+}
+
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+  margin: 180px 200px 200px 180px; 
+  }
+
+/* Заголовок преимуществ */
+.advantages__title-container {
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  text-transform: uppercase;
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+
+.advantages__title {
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+/* Список преимуществ */
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Пункт списка преимуществ */
+.advantages__list-item {
+  position:  relative;
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  padding: 40px 40px;
+  background-color: #bcfd4c;
+  color: #000;
+  border-radius: 15px;
+  transition: transform 0.4s;
+}
+
+.advantages__list-item:hover {
+  transform: scale(1.03);
+}
+
+/* Значок преимуществ */
+.advantages__list-item-image {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  align-self: center;
+  margin-bottom: 25px;
+}
+
+/* Заголовок преимуществ */
+.advantages__list-item-title {
+  display: flex;
+  align-self: center;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Текст преимуществ */
+.advantages__list-item-text {
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Контакты */
+.contacts {
+  display: flex;
+  height: 40vh;
+  flex-direction: column;
+  padding: 25px 100px;
+}
+
+/* Заголовок контактов */
+.contacts__title {
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+/* Кастомный скроллбар */
+.page::-webkit-scrollbar {
+  width: 4px;
+}
+
+.page::-webkit-scrollbar-track {
+  background-color: dimgray;
+}
+
+.page::-webkit-scrollbar-thumb {
+  background-color: #bcfd4c;
+  border-radius: 40px;
+}
+
+/* Подложка */
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Модальное окно */
+.modal {
+  display: none; /* Скрываем модальное окно по умолчанию */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s; /* Анимация появления */
+  z-index: 100;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60vw; /* Ширина модального окна */
+  animation: slideIn 0.5s; /* Анимация появления контента */
+}
+
+/* Кнопка закрытия модального окна */
+.close-button {
+  color: #6e6e6e;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Начальная прозрачность */
+.fade-in {
+  opacity: 0; 
+  transform: translateY(30px); 
+  transition: opacity 0.9s ease, transform 0.9s ease; 
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }

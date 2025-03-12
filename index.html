@@ -7,57 +7,82 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
-    <title>Авто Край/Auto Krai</title>
+    <title>Авто Край - Привоз авто из Кореи, Китая и Японии</title>
     <meta name="description" content="Привоз авто из Кореи, Китая и Японии. Подбор автомобиля и доставка до вашего города.">
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__logo-container">
         <div class="header__logo"></div>
           <a class="header__logo-link" href="#">
           <img class="header__logo-image" 
-              src="" 
-              alt="Логотип Auto Krai">
+              src="./images/orig_600x600.png"
+              alt="Логотип Авто Край">
           </a>
       </div>  
       <nav class="header__nav">
         <ul class="nav__list">
-          <li class="nav__list-item">Главная</li>
-          <li class="nav__list-item">Прeимущества</li>
-          <li class="nav__list-item">Контакты</li>
-          <li class="nav__list-item">Отзывы</li>           
-          <li class="nav__list-item">Вопросы</li>
+          <li class="nav__list-item">
+            <a class="nav__list-item-link" href="#">Главная</a>
+            </li>
+          <li class="nav__list-item">
+            <a class="nav__list-item-link" href="#section-advantages">Прeимущества</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-item-link" href="#">Вопросы</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-item-link" href="#">Отзывы</a>
+          </li>           
+          <li class="nav__list-item">
+            <a class="nav__list-item-link" href="#">Контакты</a>
+          </li>
         </ul>
       </nav>
       <div class="header__rate">
-          <h3 class="header__rate-title">Курс валют</h3р>
+          <p class="header__rate-text">Курс валют</p>
       </div>   
     </header>
     <main class="content">
       <section class="cover">
         <h1 class="cover__title">Авто Край</h1>
         <p class="cover__subtitle">Авто из Кореи, Китая и Японии</p>
+        <button class="button button__order">Заказать авто</button>
       </section>
-      <section class="advantages">
-        <h2 class="advantages-title">Почему мы</h2>
-        <ul class="advantages__list">
-          <li class="advantages__list-item">
-            <h3 class="advantages__list-item-title">Общее</h3>
-            <p class="advantages__list-item-text">
-              Безупречное исполнение работы, много довольных клиентов, более 20 лет на рынке
-            </p>
-          </li>
-          <li class="advantages__list-item">
-            <h3 class="advantages__list-item-title">Сопровождение</h3>
-            <p class="advantages__list-item-text">
-              Полное сопровождение от оформления заказа до вручения автомобиля
-            </p>
-          </li>
-          <li class="advantages__list-item">
-            <h3 class="advantages__list-item-title">Выгода</h3>
-            <p class="advantages__list-item-text">Выгода до 40% при привозе автомобиля с учетом всех налогов и доставок</p>
-          </li>
-        </ul>
+      <section class="advantages" id="section-advantages">
+        <div class="overlay"></div>
+        <div class="advantages__container">
+          <div class="advantages__title-container fade-in">
+            <h2 class="advantages__title">Почему мы</h2>
+          </div>
+          <ul class="advantages__list fade-in">
+            <li class="advantages__list-item">
+              <img class="advantages__list-item-image" 
+                  src="./icons/icon-1.svg" 
+                  alt="Значок-лист списком">
+              <h3 class="advantages__list-item-title">Общее</h3>
+              <p class="advantages__list-item-text">
+                Безупречное исполнение работы, много довольных клиентов, более 20 лет на рынке
+              </p>
+            </li>
+            <li class="advantages__list-item">
+              <img class="advantages__list-item-image" 
+                  src="./icons/icon-2.svg" 
+                  alt="Значок-галочка">
+              <h3 class="advantages__list-item-title">Сопровождение</h3>
+              <p class="advantages__list-item-text">
+                Полное сопровождение от оформления заказа до вручения автомобиля
+              </p>
+            </li>
+            <li class="advantages__list-item">
+              <img class="advantages__list-item-image" 
+                  src="./icons/icon-3.svg" 
+                  alt="Значок-денежный мешочек">
+              <h3 class="advantages__list-item-title">Выгода</h3>
+              <p class="advantages__list-item-text">Выгода до 40% при привозе автомобиля с учетом всех налогов и доставок</p>
+            </li>
+          </ul>
+        </div>  
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
@@ -65,21 +90,28 @@
           <li class="contacts__list-item">
             <a class="contacts__list-item-link" href="#">
               <img class="contacts__list-item-image" 
-                   src="" 
+                   src="./icons/icon-telegram.svg" 
                    alt="Логотип Telegram">
             </a>
           </li>
           <li class="contacts__list-item">
             <a class="contacts__list-item-link" href="#">
               <img class="contacts__list-item-image" 
-                   src=""  
+                   src="./icons/icon-whatsapp.svg"  
                    alt="Логотип Whatsapp">
             </a>
           </li>
           <li class="contacts__list-item">
             <a class="contacts__list-item-link" href="#">
               <img class="contacts__list-item-image" 
-                   src="" 
+                   src="./icons/icon-instagram.svg" 
+                   alt="Логотип Instagram">
+            </a>
+          </li>
+          <li class="contacts__list-item">
+            <a class="contacts__list-item-link" href="#">
+              <img class="contacts__list-item-image" 
+                   src="./icons/icon-phone.svg" 
                    alt="Логотип телефонной трубки">
             </a>
           </li>
@@ -87,5 +119,20 @@
       </section>
       <footer class="footer"></footer>
     </main>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <form class="form">
+              <h2>Форма</h2>
+              <label for="name">Имя:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <button type="submit">Отправить</button>
+          </form>
+      </div>
+  </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/fade-in.js"></script>
   </body>
 </html>
