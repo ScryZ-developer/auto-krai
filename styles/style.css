@@ -52,17 +52,18 @@ ol {
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
   gap: 40px;
+  padding: 2.8vh 0;
   align-items: center;
-  padding: 25px 0;
-  border-top: 10px solid #bcfd4c;
+  border-top: 6px solid #bcfd4c;
   background-color: #6e6e6e;
+  color: #000;
   transition: background-color 0.3s ease, padding 0.3s ease;
   border-bottom: 1px solid #000;  
-  z-index: 10;
+  z-index: 11;
 }
 
 header.shrink { 
-  padding: 15px 0;
+  padding: 1.8vh 0;
   background-color: rgba(110, 110, 110, 0.8);; 
   backdrop-filter: blur(8px);
 }
@@ -70,13 +71,27 @@ header.shrink {
 /* Логотип */
 .header__logo-container {
   display: block;
-  padding-left: 50px;
+  padding-left: 3vw;
+}
+
+.header__logo-image {
+  position: relative;
+  display: block;
+  height: 8vh;
+  margin: -2.5vh 0 -2.8vh;
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+header.shrink .header__logo-image {
+  height: 7vh; /* Уменьшенная высота логотипа при скролле */
+  transform: scale(0.9); /* Дополнительное уменьшение с помощью масштабирования */
 }
 
 /* Навигация по сайту */
 .nav__list {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 /* Элементы навигации */
@@ -88,14 +103,16 @@ header.shrink {
 
 /* Ссылки навигации */
 .nav__list-item-link {
+  background-color: #bcfd4c;
+  padding: 1px 4px;
+  border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.4s;
+  transition: transform 0.4s, background-color 0.4s ease, color 0.4s ease;
 }
 
 .nav__list-item-link:hover {
-  text-decoration: underline 1px;
-  text-underline-position: under;
+  background-color: #474747;
   color: #bcfd4c;
   transform: scale(1.04);
 }
@@ -104,7 +121,7 @@ header.shrink {
 .header__rate {
   display: flex;
   justify-content: end;
-  padding-right: 50px;
+  padding-right: 3vw;
 }
 
 /* Текст курса валюты */
@@ -116,7 +133,7 @@ header.shrink {
 .content {
   display: flex;
   flex-direction: column;
-  background-color: dimgray;
+  background-color: #6e6e6e;
 }
 
 /* Обложка */
@@ -127,9 +144,9 @@ header.shrink {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url(../images/image-test.jpg) no-repeat center center / cover;
+  background: url(../images/cover-bg.jpg) no-repeat center center / cover;
   box-shadow: 0 0 100px rgba(0, 0, 0, 1); 
-  z-index: 1;
+  z-index: 10;
 }
 
 /* Заголовок обложки */
@@ -167,11 +184,13 @@ header.shrink {
 .button__order {
   display: flex;
   font-size: 20px;
-  padding: 15px 30px;
-  transition: transform 0.4s;
+  padding: 1% 2%;
+  transition: transform 0.4s, background-color 0.4s ease, color 0.4s ease;
 }
 
 .button__order:hover {
+  background-color: #474747;
+  color: #bcfd4c;
   transform: scale(1.04);
 }
 
@@ -179,8 +198,9 @@ header.shrink {
 .advantages {
   position: relative;
   height: 100vh;
-  background: url(../images/test-background-1.png) no-repeat center center / cover;
-  z-index: 0;
+  background: url(../images/advantages-bg.png) no-repeat center center / cover;
+  box-shadow: 0 0 200px rgba(0, 0, 0, 1); 
+  z-index: 9;
 }
 
 .advantages__container {
@@ -196,7 +216,7 @@ header.shrink {
   align-self: start;
   text-transform: uppercase;
   font-size: 35px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 .advantages__title {
@@ -255,22 +275,262 @@ header.shrink {
   font-size: 20px;
 }
 
-/* Контакты */
-.contacts {
+/* Вопросы */
+.questions {
+  position: relative;
   display: flex;
-  height: 40vh;
+  min-height: 60vh;
+  width: 100%;
   flex-direction: column;
-  padding: 25px 100px;
+  background: url(../images/questions-bg.jpg) center center / cover;
+  z-index: 8;
 }
 
-/* Заголовок контактов */
-.contacts__title {
-  display: flex;
-  justify-content: center;
-  align-self: start;
-  text-transform: uppercase;
+.accordion {
+  width: 90vh;;
+  padding: 2%;
+  margin: 7% auto;
+  background: rgba(113, 113, 113, 0.5);
+  border-radius: 15px;
+}
+
+.accordion__title {
+  color: #bcfd4c;
   font-size: 35px;
-  margin-bottom: 25px;
+  text-align: center;
+}
+
+.accordion-item {
+  border-radius: 15px;
+  border: #bcfd4c 1px solid;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1rem;
+  background: #4b4b4b;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.5s, color 0.5s, border-radius 0.4s;
+  z-index: 6;
+}
+
+.accordion-header.active {
+  border-radius: 15px 15px 0 0;
+}
+
+.accordion-header:hover {
+  background: #bcfd4c;  
+  color: #000;
+}
+
+.accordion-icon {
+  transition: transform 0.5s;
+}
+
+.accordion-header.active .accordion-icon {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 0;
+  text-align: left;
+  transition: max-height 0.5s ease-out, padding 0.5s ease, font-size 0.5s ease;
+  background: rgb(188, 252, 77, 0.9);
+  border-radius: 0 0 15px 15px;
+  color: #000;
+  z-index: 5;
+}
+
+.accordion-content.active {
+  padding: 1rem;
+  max-height: 1000px;
+  font-size: 16px;
+}
+
+.button__order-accordion {
+  width: 100%; 
+  margin-top: 1rem;
+  padding: 1rem;
+  border: #bcfd4c 1px solid;
+}
+
+.contacts {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  background-color: aquamarine;
+  z-index: 7;
+}
+
+/* Оверлей (фон модального окна) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Модальное окно */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: #6e6e6e;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  width: 90%;
+  max-width: 700px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+/* Анимация открытия */
+.modal-overlay.active, .modal.active {
+  display: block;
+  opacity: 1;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Заголовок формы */
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.modal-header-image {
+  position: relative;
+  width: 40%;
+  left: 30%;
+}
+
+/* Кнопка закрытия */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  color: #bcfd4c;
+  cursor: pointer;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Тело формы */
+.modal-body {
+  padding: 20px;
+}
+
+/* Группы полей формы */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 1%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2c7be5;
+  outline: none;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #bcfd4c;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #474747;
+  color: #bcfd4c;
+}
+
+/* Блокировка прокрутки страницы */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Футер */
+.footer {
+  display: flex;
+  height: 20vh;
+}
+
+/* Список футера */
+.footer__list {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Пункт списка футера */
+.footer__list-item {
+  display: block;
+}
+
+.footer__list-item-image {
+  width: 60px;
 }
 
 /* Кастомный скроллбар */
@@ -294,47 +554,7 @@ header.shrink {
   width: 100%;
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: -1;
-}
-
-/* Модальное окно */
-.modal {
-  display: none; /* Скрываем модальное окно по умолчанию */
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-  backdrop-filter: blur(10px);
-  animation: fadeIn 0.5s; /* Анимация появления */
-  z-index: 100;
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 60vw; /* Ширина модального окна */
-  animation: slideIn 0.5s; /* Анимация появления контента */
-}
-
-/* Кнопка закрытия модального окна */
-.close-button {
-  color: #6e6e6e;
-  float: right;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+  z-index: -100;
 }
 
 /* Начальная прозрачность */
@@ -349,12 +569,112 @@ header.shrink {
   transform: translateY(0);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Медиа-запросы для адаптации */
+@media (max-width: 1200px) {
+  .advantages__list {
+    justify-content: center;
+  }
+  
+  .advantages__list-item {
+    max-width: 300px;
+  }
 }
 
-@keyframes slideIn {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+@media (max-width: 992px) {
+  .header {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .header__rate {
+    grid-column: span 2;
+    justify-content: center;
+    padding-right: 0;
+  }
+  
+  .cover__title {
+    font-size: 48px;
+    line-height: 42px;
+  }
+  
+  .advantages__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2vh 0;
+    grid-template-columns: 1fr;
+  }
+  
+  .header__logo-container {
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .header__rate {
+    grid-column: span 1;
+    justify-content: center;
+  }
+  
+  .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .cover__title {
+    font-size: 36px;
+    line-height: 32px;
+  }
+  
+  .cover__subtitle {
+    font-size: 16px;
+  }
+  
+  .advantages__list-item {
+    padding: 20px;
+  }
+  
+  .advantages__list-item-title {
+    font-size: 20px;
+  }
+  
+  .advantages__list-item-text {
+    font-size: 14px;
+  }
+  
+  .accordion__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cover__title {
+    font-size: 28px;
+    line-height: 26px;
+  }
+  
+  .button__order {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  .advantages__title {
+    font-size: 24px;
+  }
+  
+  .advantages__list-item-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .modal-header-image {
+    width: 60%;
+  }
+  
+  .close-btn {
+    font-size: 24px;
+  }
 }

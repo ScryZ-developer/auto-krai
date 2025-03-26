@@ -8,34 +8,34 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
     <title>Авто Край - Привоз авто из Кореи, Китая и Японии</title>
+    <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
     <meta name="description" content="Привоз авто из Кореи, Китая и Японии. Подбор автомобиля и доставка до вашего города.">
   </head>
   <body class="page">
     <header class="header" id="header">
       <div class="header__logo-container">
-        <div class="header__logo"></div>
           <a class="header__logo-link" href="#">
           <img class="header__logo-image" 
-              src="./images/orig_600x600.png"
+              src="./images/main-logo.png"
               alt="Логотип Авто Край">
           </a>
       </div>  
       <nav class="header__nav">
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Главная</a>
+            <a class="nav__list-item-link" href="/?t=12345" id="home-link">Главная</a>
             </li>
           <li class="nav__list-item">
             <a class="nav__list-item-link" href="#section-advantages">Прeимущества</a>
           </li>
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Вопросы</a>
+            <a class="nav__list-item-link" href="#section-questions">Вопросы</a>
           </li>
           <li class="nav__list-item">
             <a class="nav__list-item-link" href="#">Отзывы</a>
           </li>           
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Контакты</a>
+            <a class="nav__list-item-link" href="#section-contacts">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -47,7 +47,7 @@
       <section class="cover">
         <h1 class="cover__title">Авто Край</h1>
         <p class="cover__subtitle">Авто из Кореи, Китая и Японии</p>
-        <button class="button button__order">Заказать авто</button>
+        <button class="button button__order" id="openFormBtn">Заказать авто</button>
       </section>
       <section class="advantages" id="section-advantages">
         <div class="overlay"></div>
@@ -84,55 +84,163 @@
           </ul>
         </div>  
       </section>
-      <section class="contacts">
+      <section class="questions" id="section-questions">
+        <div class="overlay"></div>
+        <div class="accordion fade-in">
+          <h2 class="accordion__title">FAQ - часто задаваемые вопросы</h2>
+          <div class="accordion-item">
+              <button class="accordion-header">
+                  Какие документы требуются для оформления автомобиля?
+                  <span class="accordion-icon">></span>
+              </button>
+              <div class="accordion-content">
+                  <p>Для таможенного оформления потребуются: <br>
+                    Паспорт транспортного средства (PTS) или его иностранный аналог <br>          
+                    Договор купли-продажи <br>
+                    Сертификат соответствия <br>
+                    Документы, подтверждающие таможенную очистку <br>
+                    Платежные документы об уплате таможенных пошлин</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+                Сколько времени занимает доставка авто из Кореи/Японии/Китая?
+                <span class="accordion-icon">></span>
+            </button>
+            <div class="accordion-content">
+                <p>Корея: 20-35 дней <br>
+                  Япония: 20-30 дней <br>
+                  Китай: 30-45 дней <br>
+                  Примечание: Сроки могут увеличиться из-за таможенного оформления</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+                Какие скрытые платежи могут быть при покупке?
+                <span class="accordion-icon">></span>
+            </button>
+            <div class="accordion-content">
+                <p>Наша компания проводит максимально прозрачную сделку <br>
+                  Но, помимо стоимости авто, учитывайте: <br>
+                  Таможенные пошлины (10-15% от стоимости) <br>
+                  Утилизационный сбор (3-5%) <br>
+                  Сертификация (2-4%) <br>
+                  Доставка до вашего города (зависит от региона)</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+                Можно ли проверить машину до оплаты?
+                <span class="accordion-icon">></span>
+            </button>
+            <div class="accordion-content">
+                <p>Да! Мы предоставляем: <br>
+                  Фото и видеоотчеты (включая пробег, салон, двигатель) <br>
+                  Диагностику через OBD-сканер (проверка ошибок) <br>
+                  Выездной осмотр при подборе авто</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+                Какие документы я получу?
+                <span class="accordion-icon">></span>
+            </button>
+            <div class="accordion-content">
+                <p>Полный пакет: <br>
+                  Договор купли-продажи (нотариально заверенный) <br>           
+                  Инвойс с указанием стоимости <br>
+                  Сертификат соответствия ТР ТС <br>
+                  Таможенная декларация <br>
+                  ПТС российского образца</p>
+            </div>
+          </div>
+          <button class="button button__order button__order-accordion" id="openFormBtn">Заказать авто</button>
+      </section>  
+      <section class="contacts" id="section-contacts">
         <h2 class="contacts__title">Контакты</h2>
         <ul class="contacts__list">
+          <li class="contacts__list-item">Александр</li>
           <li class="contacts__list-item">
-            <a class="contacts__list-item-link" href="#">
-              <img class="contacts__list-item-image" 
+            Илья 
+            <a class="contacts__list-item-link" ></a>
+          </li>
+        </ul>
+      </section>
+      <footer class="footer">
+        <ul class="footer__list"> 
+          <li class="footer__list-item">
+            <a class="footer__list-item-link" href="#">
+              <img class="footer__list-item-image" 
                    src="./icons/icon-telegram.svg" 
                    alt="Логотип Telegram">
             </a>
           </li>
-          <li class="contacts__list-item">
-            <a class="contacts__list-item-link" href="#">
-              <img class="contacts__list-item-image" 
+          <li class="footer__list-item">
+            <a class="footer__list-item-link" href="#">
+              <img class="footer__list-item-image" 
                    src="./icons/icon-whatsapp.svg"  
                    alt="Логотип Whatsapp">
             </a>
           </li>
-          <li class="contacts__list-item">
-            <a class="contacts__list-item-link" href="#">
-              <img class="contacts__list-item-image" 
+          <li class="footer__list-item">
+            <a class="footer__list-item-link" href="#">
+              <img class="footer__list-item-image" 
                    src="./icons/icon-instagram.svg" 
                    alt="Логотип Instagram">
             </a>
           </li>
-          <li class="contacts__list-item">
-            <a class="contacts__list-item-link" href="#">
-              <img class="contacts__list-item-image" 
+          <li class="footer__list-item">
+            <a class="footer__list-item-link" href="#">
+              <img class="footer__list-item-image" 
                    src="./icons/icon-phone.svg" 
                    alt="Логотип телефонной трубки">
             </a>
           </li>
         </ul>
-      </section>
-      <footer class="footer"></footer>
+      </footer>
     </main>
-    <div id="modal" class="modal">
-      <div class="modal-content">
-          <span class="close-button">&times;</span>
-          <form class="form">
-              <h2>Форма</h2>
-              <label for="name">Имя:</label>
-              <input type="text" id="name" name="name" required>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-              <button type="submit">Отправить</button>
-          </form>
+    <!-- Оверлей (размытый фон) -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- Модальное окно с формой -->
+    <div class="modal" id="orderModal">
+      <div class="modal-header">
+        <img class="modal-header-image" src="./images/main-logo.png" alt="Логотип Авто Край">
+        <button class="close-btn" id="closeModal">&times;</button>
       </div>
-  </div>
+      <div class="modal-body">
+        <form id="carOrderForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder="Ваше имя:">
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" required placeholder="Ваш телефон:">
+          </div>
+          <div class="form-group">
+            <input type="text" id="city" name="city" required placeholder="Ваш город:">
+          </div>
+          <div class="form-group">
+            <input type="text" id="carModel" name="carModel" required placeholder="Какой автомобиль интересует:">
+          </div>
+          <div class="form-group budget-input">
+            <input type="number" id="budget" name="budget" placeholder="Укажите ваш бюджет в рублях">
+          </div>
+          <div class="form-group">
+            <h3 class="form-group-title">Из какой страны будет автомобиль?</h3>
+            <select id="country" name="country" required>
+                <option value="">Выберите страну</option>
+                <option value="Корея">Корея</option>
+                <option value="Китай">Китай</option>
+                <option value="Япония">Япония</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/script.js"></script>
     <script src="./js/fade-in.js"></script>
+    <script src="./js/faq.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
