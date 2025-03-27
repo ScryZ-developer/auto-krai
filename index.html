@@ -155,53 +155,59 @@
             </div>
           </div>
           <button class="button button__order button__order-accordion" id="openFormBtn">Заказать авто</button>
-      </section>  
-      <section class="contacts" id="section-contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <ul class="contacts__list">
-          <li class="contacts__list-item">Александр</li>
-          <li class="contacts__list-item">
-            Илья 
-            <a class="contacts__list-item-link" ></a>
-          </li>
-        </ul>
       </section>
-      <footer class="footer">
-        <ul class="footer__list"> 
-          <li class="footer__list-item">
-            <a class="footer__list-item-link" href="#">
-              <img class="footer__list-item-image" 
-                   src="./icons/icon-telegram.svg" 
-                   alt="Логотип Telegram">
-            </a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__list-item-link" href="#">
-              <img class="footer__list-item-image" 
-                   src="./icons/icon-whatsapp.svg"  
-                   alt="Логотип Whatsapp">
-            </a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__list-item-link" href="#">
-              <img class="footer__list-item-image" 
-                   src="./icons/icon-instagram.svg" 
-                   alt="Логотип Instagram">
-            </a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__list-item-link" href="#">
-              <img class="footer__list-item-image" 
-                   src="./icons/icon-phone.svg" 
-                   alt="Логотип телефонной трубки">
-            </a>
-          </li>
-        </ul>
-      </footer>
+      <div class="section-container">
+        <div class="overlay"></div>
+        <section class="contacts" id="section-contacts">
+          <h2 class="contacts__title">Контакты</h2>
+          <div class="contacts__container">
+            <ul class="contacts__list">
+              <li class="contacts__list-item">Александр <a class="contacts__list-item-link" href="tel:+89135347377">+8(913)534-73-77</a></li>
+              <li class="contacts__list-item">Илья <a class="contacts__list-item-link" href="tel:+89135590420">+8(913)559-04-20</a></li>
+            </ul>
+            <div class="contacts__text-container">
+              <p class="contacts__text">Контакты доступны для связи в Whatsapp, Telegram, а такжу по мобильному телефону</p>
+              <p class="contacts__text">Рабочее время с 9:00 до 18:00 (пн-пт) и с 10:00 до 16:00 (сб-вс)</p>
+              <p class="contacts__text">По Красноярскому времени (+4 часа)</p>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <ul class="footer__list"> 
+            <li class="footer__list-item">
+              <a class="footer__list-item-link" href="#">
+                <img class="footer__list-item-image" 
+                    src="./icons/icon-telegram.svg" 
+                    alt="Логотип Telegram">
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__list-item-link" href="#">
+                <img class="footer__list-item-image" 
+                    src="./icons/icon-whatsapp.svg"  
+                    alt="Логотип Whatsapp">
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__list-item-link" href="#">
+                <img class="footer__list-item-image" 
+                    src="./icons/icon-instagram.svg" 
+                    alt="Логотип Instagram">
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__list-item-link" href="#">
+                <img class="footer__list-item-image" 
+                    src="./icons/icon-phone.svg" 
+                    alt="Логотип телефонной трубки">
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </div>
     </main>
     <!-- Оверлей (размытый фон) -->
     <div class="modal-overlay" id="modalOverlay"></div>
-
     <!-- Модальное окно с формой -->
     <div class="modal" id="orderModal">
       <div class="modal-header">

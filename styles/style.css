@@ -103,16 +103,14 @@ header.shrink .header__logo-image {
 
 /* Ссылки навигации */
 .nav__list-item-link {
-  background-color: #bcfd4c;
-  padding: 1px 4px;
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
+  color: #fff;
   transition: transform 0.4s, background-color 0.4s ease, color 0.4s ease;
 }
 
 .nav__list-item-link:hover {
-  background-color: #474747;
   color: #bcfd4c;
   transform: scale(1.04);
 }
@@ -206,7 +204,7 @@ header.shrink .header__logo-image {
 .advantages__container {
   display: flex;
   flex-direction: column;
-  margin: 180px 200px 200px 180px; 
+  margin: 11% 10%; 
   }
 
 /* Заголовок преимуществ */
@@ -228,7 +226,7 @@ header.shrink .header__logo-image {
 .advantages__list {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 3%;
 }
 
 /* Пункт списка преимуществ */
@@ -237,11 +235,13 @@ header.shrink .header__logo-image {
   display: flex;
   flex-direction: column;
   width: 33%;
-  padding: 40px 40px;
+  padding: 4%;
   background-color: #bcfd4c;
   color: #000;
   border-radius: 15px;
   transition: transform 0.4s;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .advantages__list-item:hover {
@@ -251,8 +251,7 @@ header.shrink .header__logo-image {
 /* Значок преимуществ */
 .advantages__list-item-image {
   display: flex;
-  width: 120px;
-  height: 120px;
+  width: 60%;
   align-self: center;
   margin-bottom: 25px;
 }
@@ -265,6 +264,7 @@ header.shrink .header__logo-image {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
+  word-wrap: normal;
 }
 
 /* Текст преимуществ */
@@ -302,7 +302,6 @@ header.shrink .header__logo-image {
 
 .accordion-item {
   border-radius: 15px;
-  border: #bcfd4c 1px solid;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -326,6 +325,7 @@ header.shrink .header__logo-image {
 
 .accordion-header.active {
   border-radius: 15px 15px 0 0;
+  border: #bcfd4c 1px solid;
 }
 
 .accordion-header:hover {
@@ -346,6 +346,8 @@ header.shrink .header__logo-image {
   overflow: hidden;
   font-size: 0;
   text-align: left;
+  width: 95%;
+  justify-self: center;
   transition: max-height 0.5s ease-out, padding 0.5s ease, font-size 0.5s ease;
   background: rgb(188, 252, 77, 0.9);
   border-radius: 0 0 15px 15px;
@@ -366,12 +368,57 @@ header.shrink .header__logo-image {
   border: #bcfd4c 1px solid;
 }
 
+.section-container {
+  position: relative;
+  background-image: url(../images/questions-bg.jpg);
+  z-index: 8;
+}
+
 .contacts {
   display: flex;
   width: 50vw;
   flex-direction: column;
-  background-color: aquamarine;
-  z-index: 7;
+}
+
+.contacts__title {
+  color: #bcfd4c;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 3%;
+}
+
+.contacts__container {
+  padding: 3%;
+  margin: 3% 5% 3% 5%;
+  background: rgba(113, 113, 113, 0.5);  
+  border-radius: 15px;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column; 
+  line-height: 150%;
+}
+
+.contacts__list-item-link {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+  color: #bcfd4c; 
+}
+
+.contacts__text-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  padding: 2% 1% 2% 1%;
+  background-color: #4b4b4b;
+  border-radius: 15px;
+  border: #bcfd4c 1px solid;
+}
+
+.contacts__text {
+  line-height: 150%;
+  font-size: 16px;
 }
 
 /* Оверлей (фон модального окна) */
@@ -514,23 +561,45 @@ body.modal-open {
 
 /* Футер */
 .footer {
+  position: relative;
   display: flex;
-  height: 20vh;
+  margin-top: 3%;
+  justify-self: center;
+  background-color: rgba(113, 113, 113, 0.5);
+  height: 15vh;
+  width: 60vw;
+  border-radius: 20px 20px 0 0;
 }
 
-/* Список футера */
 .footer__list {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
 }
 
-/* Пункт списка футера */
 .footer__list-item {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
+
+.footer__list-item:first-child {
+  padding-left: 12%;
+}
+
+.footer__list-item-link {
+  display: flex;
+}
+
 
 .footer__list-item-image {
-  width: 60px;
+  display: block;
+  width: 25%;
+  height: 25%;
 }
 
 /* Кастомный скроллбар */
