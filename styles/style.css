@@ -31,13 +31,8 @@ ol {
 
 /* Страница сайта */
 .page {
-  display: grid;
-  grid-template-areas: 
-  "header"
-  "cover" 
-  "advantages" 
-  "contacts" 
-  "footer";
+  display: flex;
+  flex-direction: column;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -368,15 +363,24 @@ header.shrink .header__logo-image {
   border: #bcfd4c 1px solid;
 }
 
+.container-block  {
+  position: relative;
+  z-index: 8;
+  background-image: url(../images/questions-bg.jpg);
+}
+
 .section-container {
   position: relative;
-  background-image: url(../images/questions-bg.jpg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "contacts calculator"
+  "maps calculator";
   z-index: 8;
 }
 
 .contacts {
   display: flex;
-  width: 50vw;
   flex-direction: column;
 }
 
@@ -424,6 +428,38 @@ header.shrink .header__logo-image {
 .contacts__text {
   line-height: 150%;
   font-size: 16px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator__title {
+  color: #bcfd4c;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 3%;
+}
+
+.calculator__container {
+  padding: 3%;
+  margin: 3% 5% 3% 0;
+  background: rgba(113, 113, 113, 0.5);  
+  border-radius: 15px;
+}
+
+.maps {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+}
+
+.maps__title {
+  color: #bcfd4c;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 3%;
 }
 
 /* Оверлей (фон модального окна) */
@@ -569,11 +605,13 @@ body.modal-open {
   position: relative;
   display: flex;
   margin-top: 3%;
+  align-self: center;
   justify-self: center;
   background-color: rgba(113, 113, 113, 0.5);
   height: 15vh;
   width: 60vw;
   border-radius: 20px 20px 0 0;
+  z-index: 100;
 }
 
 .footer__list {
