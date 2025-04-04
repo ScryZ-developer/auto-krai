@@ -176,7 +176,84 @@
           <section class="calculator">  
             <h2 class="calculator__title">Рассчитайте стоимости авто</h2>
             <div class="calculator__container">
-
+              <div class="form-group">
+                <label>Тип двигателя</label>
+                <select id="engineType">
+                    <option value="petrol">Бензин</option>
+                    <option value="diesel">Дизель</option>
+                    <option value="electric">Электро</option>
+                    <option value="diesel_hybrid">Дизельный гибрид</option>
+                    <option value="petrol_hybrid">Бензиновый гибрид</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Страна происхождения</label>
+                <select id="country">
+                    <option value="korea">Корея</option>
+                    <option value="japan">Япония</option>
+                    <option value="china">Китай</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Стоимость авто</label>
+                <input type="number" id="carPrice" value="10000000">
+                <div class="exchange-rate" id="priceCurrency">₩ (воны)</div>
+            </div>
+            
+            <div class="form-group">
+                <label>Год выпуска</label>
+                <input type="number" id="year" min="2000" max="2025" value="2021">
+            </div>
+            
+            <div class="form-group">
+                <label>Тип владельца</label>
+                <select id="ownerType">
+                    <option value="individual">Физическое лицо</option>
+                    <option value="legal">Юридическое лицо</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Объем двигателя, см³</label>
+                <input type="number" id="engineVolume" value="999">
+            </div>
+            
+            <div class="form-group">
+                <label>Мощность, л.с.</label>
+                <input type="number" id="powerHp" value="100">
+            </div>
+            
+            <div class="form-group" id="electricPowerGroup" style="display: none;">
+                <label>Мощность электро, кВт.</label>
+                <input type="number" id="electricPower" value="100">
+            </div>
+            
+            <div class="form-group">
+                <label>Курс валюты (руб)</label>
+                <div>
+                    <label style="display: inline-block; width: 30%;">Корейская вона: </label>
+                    <input type="number" id="krwRate" value="0.065" step="0.001" style="width: 65%; display: inline-block;">
+                </div>
+                <div>
+                    <label style="display: inline-block; width: 30%;">Японская иена: </label>
+                    <input type="number" id="jpyRate" value="0.55" step="0.01" style="width: 65%; display: inline-block;">
+                </div>
+                <div>
+                    <label style="display: inline-block; width: 30%;">Китайский юань: </label>
+                    <input type="number" id="cnyRate" value="11.5" step="0.1" style="width: 65%; display: inline-block;">
+                </div>
+            </div>
+            
+            <button onclick="calculateCost()">Рассчитать стоимость</button>
+            
+            <div class="result" id="result">
+                <h3>Итоговая стоимость:</h3>
+                <p id="totalCost"></p>
+                <p id="details"></p>
+                <p class="hidden-fee">*В стоимость включена комиссия компании за услуги в размере 35,000 ₽</p>
+            </div>
             </div>
           </section>
           <section class="maps">
@@ -262,6 +339,6 @@
     <script src="./js/fade-in.js"></script>
     <script src="./js/faq.js"></script>
     <script src="./js/modal.js"></script>
-    <!--<script src="./js/calc.js"></script>-->
+    <script src="./js/calc.js"></script>
   </body>
 </html>
