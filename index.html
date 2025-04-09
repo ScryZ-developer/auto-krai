@@ -176,83 +176,84 @@
           <section class="calculator">  
             <h2 class="calculator__title">Рассчитайте стоимости авто</h2>
             <div class="calculator__container">
-              <div class="form-group">
-                <label>Тип двигателя</label>
-                <select id="engineType">
-                    <option value="petrol">Бензин</option>
-                    <option value="diesel">Дизель</option>
-                    <option value="electric">Электро</option>
-                    <option value="diesel_hybrid">Дизельный гибрид</option>
-                    <option value="petrol_hybrid">Бензиновый гибрид</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label>Страна происхождения</label>
-                <select id="country">
-                    <option value="korea">Корея</option>
-                    <option value="japan">Япония</option>
-                    <option value="china">Китай</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label>Стоимость авто</label>
-                <input type="number" id="carPrice" value="10000000">
-                <div class="exchange-rate" id="priceCurrency">₩ (воны)</div>
-            </div>
-            
-            <div class="form-group">
-                <label>Год выпуска</label>
-                <input type="number" id="year" min="2000" max="2025" value="2021">
-            </div>
-            
-            <div class="form-group">
-                <label>Тип владельца</label>
-                <select id="ownerType">
-                    <option value="individual">Физическое лицо</option>
-                    <option value="legal">Юридическое лицо</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label>Объем двигателя, см³</label>
-                <input type="number" id="engineVolume" value="999">
-            </div>
-            
-            <div class="form-group">
-                <label>Мощность, л.с.</label>
-                <input type="number" id="powerHp" value="100">
-            </div>
-            
-            <div class="form-group" id="electricPowerGroup" style="display: none;">
-                <label>Мощность электро, кВт.</label>
-                <input type="number" id="electricPower" value="100">
-            </div>
-            
-            <div class="form-group">
-                <label>Курс валюты (руб)</label>
-                <div>
-                    <label style="display: inline-block; width: 30%;">Корейская вона: </label>
-                    <input type="number" id="krwRate" value="0.065" step="0.001" style="width: 65%; display: inline-block;">
+              <!-- Шаг 1: Выбор страны -->
+              <div class="step active" id="step1">
+                <h2>Выберите страну</h2>
+                <div class="country-selector">
+                    <div class="country-option" data-country="korea">
+                        <img src="./images/kr.png" alt="Корея">
+                        <div>Корея</div>
+                    </div>
+                    <div class="country-option" data-country="japan">
+                        <img src="https://flagcdn.com/w80/jp.png" alt="Япония">
+                        <div>Япония</div>
+                    </div>
+                    <div class="country-option" data-country="china">
+                        <img src="https://flagcdn.com/w80/cn.png" alt="Китай">
+                        <div>Китай</div>
+                    </div>
                 </div>
-                <div>
-                    <label style="display: inline-block; width: 30%;">Японская иена: </label>
-                    <input type="number" id="jpyRate" value="0.55" step="0.01" style="width: 65%; display: inline-block;">
+                <button class="button button__next" id="nextBtn" disabled>Далее</button>
+              </div>
+            <!-- Шаг 2: Ввод параметров -->
+            <div class="step" id="step2">
+                <h2>Параметры автомобиля</h2>
+                <div class="form-group">
+                    <label>Тип двигателя</label>
+                    <select id="engineType">
+                        <option value="petrol">Бензин</option>
+                        <option value="diesel">Дизель</option>
+                        <option value="electric">Электро</option>
+                        <option value="diesel_hybrid">Дизельный гибрид</option>
+                        <option value="petrol_hybrid">Бензиновый гибрид</option>
+                    </select>
                 </div>
-                <div>
-                    <label style="display: inline-block; width: 30%;">Китайский юань: </label>
-                    <input type="number" id="cnyRate" value="11.5" step="0.1" style="width: 65%; display: inline-block;">
+                <div class="form-group">
+                    <label id="priceLabel">Стоимость авто</label>
+                    <input type="number" id="carPrice" value="10000000">
+                    <div class="currency-info" id="currencyInfo">₩ (воны)</div>
                 </div>
-            </div>
-            
-            <button onclick="calculateCost()">Рассчитать стоимость</button>
-            
-            <div class="result" id="result">
-                <h3>Итоговая стоимость:</h3>
-                <p id="totalCost"></p>
-                <p id="details"></p>
-                <p class="hidden-fee">*В стоимость включена комиссия компании за услуги в размере 35,000 ₽</p>
+                <div class="form-group">
+                    <label>Год выпуска</label>
+                    <input type="number" id="year" min="2000" max="2025" value="2021">
+                </div>
+                <div class="form-group">
+                    <label>Тип владельца</label>
+                    <select id="ownerType">
+                        <option value="individual">Физическое лицо</option>
+                        <option value="legal">Юридическое лицо</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Объем двигателя, см³</label>
+                    <input type="number" id="engineVolume" value="999">
+                </div>
+                <div class="form-group">
+                    <label>Мощность, л.с.</label>
+                    <input type="number" id="powerHp" value="100">
+                </div>
+                <div class="form-group" id="electricPowerGroup" style="display: none;">
+                    <label>Мощность электро, кВт.</label>
+                    <input type="number" id="electricPower" value="100">
+                </div>
+                <div class="form-group">
+                    <label>Курс валюты (руб)</label>
+                    <input type="number" id="exchangeRate" step="0.001" value="0.065">
+                    <div class="currency-info">Текущий курс к рублю</div>
+                </div>
+                <button onclick="calculateCost()">Рассчитать стоимость</button>
+                <button class="secondary" onclick="backToStep1()">Назад</button>
+              </div>
+            <!-- Шаг 3: Результаты -->
+            <div class="step" id="step3">
+                <h2>Результаты расчета</h2>
+                <div class="result" id="result">
+                    <h3>Итоговая стоимость:</h3>
+                    <p id="totalCost" style="font-size: 24px; font-weight: bold;"></p>
+                    <p id="details"></p>
+                    <p class="hidden-fee">*В стоимость включена комиссия компании за услуги в размере 35,000 ₽</p>
+                </div
+                <button class="secondary" onclick="backToStep2()">Вернуться к расчету</button>
             </div>
             </div>
           </section>
@@ -262,7 +263,7 @@
 
             </div>
           </section>
-        </div>
+        </div>  
         <footer class="footer">
           <ul class="footer__list"> 
             <li class="footer__list-item">

@@ -373,17 +373,16 @@ header.shrink .header__logo-image {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
-  "contacts calculator"
-  "maps calculator";
+  grid-template-rows: 1fr;
   z-index: 8;
 }
 
 .contacts {
-  display: flex;
+  display: grid;
   flex-direction: column;
   height: 30vh;
   grid-column: 1;
+  grid-row: 1;
 }
 
 .contacts__title {
@@ -433,9 +432,10 @@ header.shrink .header__logo-image {
 }
 
 .calculator {
-  display: flex;
+  display: grid;
   flex-direction: column;
   grid-column: 2;
+  grid-template-rows: 2;
 }
 
 .calculator__title {
@@ -445,18 +445,107 @@ header.shrink .header__logo-image {
   padding-top: 3%;
 }
 
-.calculator__container {
-  padding: 3%;
-  margin: 3% 5% 3% 0;
-  background: rgba(113, 113, 113, 0.5);  
-  border-radius: 15px;
+.step {
+  display: none;
+  background-color: #4b4b4b;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.step.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+  
+.button__next {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e9f7ef;
+  border-radius: 4px;
+  display: none;
+}
+
+.country-selector {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.country-option {
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: 2px solid #ddd;
+}
+
+.country-option:hover {
+  border-color: #4CAF50;
+}
+
+.country-option.selected {
+  border-color: #4CAF50;
+  background-color: #f0f9f0;
+}
+
+.country-option img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.hidden-fee {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.currency-info {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
 .maps {
-  display: flex;
-  width: 50vw;
+  display: grid;
   flex-direction: column;
   grid-column: 1;
+  grid-row: 2;
 }
 
 .maps__title {
