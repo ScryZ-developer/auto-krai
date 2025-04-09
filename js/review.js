@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const nextBtn = document.querySelector('.carousel-btn.next');
   
   let currentIndex = 0;
-  const cardWidth = cards[0].offsetWidth + 20; // ширина карточки + margin
+  const cardWidth = cards[0].offsetWidth + 75; // ширина карточки + margin
   const visibleCards = 3;
   const totalCards = cards.length;
   

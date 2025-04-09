@@ -372,6 +372,111 @@ header.shrink .header__logo-image {
   z-index: 9;
 }
 
+.reviews-section {
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #bcfd4c;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review-card {
+  flex: 0 0 calc(33.333% - 20px);
+  margin: 0 10px;
+  background: rgba(113, 113, 113, 0.5); 
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.review-photo {
+  width: 80%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  display: block;
+  border: 1px solid #000;
+}
+
+.review-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #bcfd4c;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #bcfd4c;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: #4e4e4e;
+  color: #bcfd4c;
+}
+
+.carousel-btn:disabled {
+  opacity: 0;
+  visibility: hidden;
+  cursor: default;
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+.carousel-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #333;
+}
+
+
 .section-container {
   position: relative;
   display: grid;
@@ -941,5 +1046,17 @@ body.modal-open {
   
   .close-btn {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-card {
+      flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+      flex: 0 0 calc(100% - 20px);
   }
 }
