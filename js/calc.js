@@ -4,8 +4,8 @@
  // Курсы валют по умолчанию
  const defaultRates = {
      korea: 0.065,   // 1 KRW = 0.065 RUB
-     japan: 0.55,     // 1 JPY = 0.55 RUB
-     china: 11.5      // 1 CNY = 11.5 RUB
+     japan: 0.55,    // 1 JPY = 0.55 RUB
+     china: 11.5     // 1 CNY = 11.5 RUB
  };
  
  // Названия валют
@@ -21,36 +21,55 @@
      const countryOptions = document.querySelectorAll('.country-option');
      countryOptions.forEach(option => {
          option.addEventListener('click', function() {
-             countryOptions.forEach(opt => opt.classList.remove('selected'));
+             countryOptions.forEach(opt => {
+                 opt.classList.remove('selected');
+                 opt.style.transform = '';
+                 opt.style.boxShadow = '';
+             });
              this.classList.add('selected');
              selectedCountry = this.getAttribute('data-country');
              document.getElementById('nextBtn').disabled = false;
+             
+             // Анимация выбора
+             this.style.transform = 'translateY(-5px)';
+             this.style.boxShadow = '0 5px 15px rgba(76, 175, 80, 0.2)';
          });
      });
      
      // Кнопка "Далее"
      document.getElementById('nextBtn').addEventListener('click', function() {
+         // Анимация перехода
          document.getElementById('step1').classList.remove('active');
-         document.getElementById('step2').classList.add('active');
-         
-         // Устанавливаем курс валюты по умолчанию для выбранной страны
-         document.getElementById('exchangeRate').value = defaultRates[selectedCountry];
-         document.getElementById('currencyInfo').textContent = currencyNames[selectedCountry];
-         
-         // Обновляем label для стоимости авто
-         document.getElementById('priceLabel').textContent = 
-             `Стоимость авто (${currencyNames[selectedCountry].split(' ')[0]})`;
+         setTimeout(() => {
+             document.getElementById('step2').classList.add('active');
+             
+             // Устанавливаем курс валюты по умолчанию для выбранной страны
+             document.getElementById('exchangeRate').value = defaultRates[selectedCountry];
+             document.getElementById('currencyInfo').textContent = currencyNames[selectedCountry];
+             
+             // Обновляем label для стоимости авто
+             document.getElementById('priceLabel').textContent = 
+                 `Стоимость авто (${currencyNames[selectedCountry].split(' ')[0]})`;
+         }, 400);
      });
      
-     // Показываем/скрываем поле для электро мощности в зависимости от типа двигателя
+     // Показываем/скрываем поле для электро мощности
      document.getElementById('engineType').addEventListener('change', function() {
          const electricPowerGroup = document.getElementById('electricPowerGroup');
          const engineType = this.value;
          
          if (engineType === 'electric' || engineType.includes('hybrid')) {
              electricPowerGroup.style.display = 'block';
+             setTimeout(() => {
+                 electricPowerGroup.style.opacity = '1';
+                 electricPowerGroup.style.transform = 'translateY(0)';
+             }, 10);
          } else {
-             electricPowerGroup.style.display = 'none';
+             electricPowerGroup.style.opacity = '0';
+             electricPowerGroup.style.transform = 'translateY(-10px)';
+             setTimeout(() => {
+                 electricPowerGroup.style.display = 'none';
+             }, 300);
          }
      });
  });
@@ -58,12 +77,16 @@
  // Функции навигации
  function backToStep1() {
      document.getElementById('step2').classList.remove('active');
-     document.getElementById('step1').classList.add('active');
+     setTimeout(() => {
+         document.getElementById('step1').classList.add('active');
+     }, 400);
  }
  
  function backToStep2() {
      document.getElementById('step3').classList.remove('active');
-     document.getElementById('step2').classList.add('active');
+     setTimeout(() => {
+         document.getElementById('step2').classList.add('active');
+     }, 400);
  }
  
  // Основная функция расчета
@@ -183,11 +206,13 @@
          Акцизный сбор: ${exciseTax.toLocaleString('ru-RU')} ₽<br>
          НДС: ${vat.toLocaleString('ru-RU')} ₽<br>
          Утилизационный сбор: ${recyclingFee.toLocaleString('ru-RU')} ₽<br>
-         <span style="color: #666">Комиссия компании: ${companyFee.toLocaleString('ru-RU')} ₽</span>
+         <span style="color: #4e4e4e">Комиссия компании: ${companyFee.toLocaleString('ru-RU')} ₽</span>
      `;
      document.getElementById('result').style.display = 'block';
      
      // Переходим на шаг с результатами
      document.getElementById('step2').classList.remove('active');
-     document.getElementById('step3').classList.add('active');
- }
+     setTimeout(() => {
+         document.getElementById('step3').classList.add('active');
+     }, 400);
+ }  

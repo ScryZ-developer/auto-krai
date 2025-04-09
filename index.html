@@ -158,144 +158,210 @@
       </section>
       <div class="container-block">
         <div class="overlay"></div>
-        <div class="section-container">
-          <section class="contacts" id="section-contacts">
+        <section class="reviews-section">
+          <h2 class="section-title">Отзывы наших клиентов</h2>
+          <div class="carousel-container">
+              <button class="carousel-btn prev" disabled>
+                  <svg viewBox="0 0 24 24">
+                      <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+                  </svg>
+              </button>
+              <div class="carousel">
+                  <div class="review-card">
+                      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Фото клиента" class="review-photo">
+                      <h3 class="review-name">Анна Иванова</h3>
+                      <p class="review-text">Отличный сервис! Быстро, качественно и профессионально. Рекомендую всем своим знакомым. Очень довольна результатом.</p>
+                  </div>
+                  
+                  <div class="review-card">
+                      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Фото клиента" class="review-photo">
+                      <h3 class="review-name">Дмитрий Петров</h3>
+                      <p class="review-text">Работа выполнена в срок и даже раньше. Качество на высшем уровне. Буду обращаться еще и советовать друзьям.</p>
+                  </div>
+                  
+                  <div class="review-card">
+                      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Фото клиента" class="review-photo">
+                      <h3 class="review-name">Елена Сидорова</h3>
+                      <p class="review-text">Приятно удивлена уровнем сервиса. Все вопросы решались оперативно, персонал вежливый и компетентный.</p>
+                  </div>
+                  
+                  <div class="review-card">
+                      <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Фото клиента" class="review-photo">
+                      <h3 class="review-name">Алексей Смирнов</h3>
+                      <p class="review-text">Очень профессиональный подход. Учли все пожелания и предложили оптимальное решение. Спасибо за работу!</p>
+                  </div>
+                  
+                  <div class="review-card">
+                      <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Фото клиента" class="review-photo">
+                      <h3 class="review-name">Ольга Кузнецова</h3>
+                      <p class="review-text">Все просто прекрасно! От первого контакта до завершения работы. Обязательно вернусь снова. Лучший сервис в городе!</p>
+                  </div>
+              </div>
+              
+              <button class="carousel-btn next">
+                  <svg viewBox="0 0 24 24">
+                      <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                  </svg>
+              </button>
+          </div>
+      </section>
+      <div class="section-container">
+        <section class="contacts" id="section-contacts">
+          <div class="contacts__title-container">
             <h2 class="contacts__title">Контакты</h2>
-            <div class="contacts__container">
-              <ul class="contacts__list">
-                <li class="contacts__list-item">Александр <a class="contacts__list-item-link" href="tel:+89135347377">+8(913)534-73-77</a></li>
-                <li class="contacts__list-item">Илья <a class="contacts__list-item-link" href="tel:+89135590420">+8(913)559-04-20</a></li>
-              </ul>
-              <div class="contacts__text-container">
-                <p class="contacts__text">Контакты доступны для связи в Whatsapp, Telegram, а такжу по мобильному телефону</p>
-                <p class="contacts__text">Рабочее время с 9:00 до 18:00 (пн-пт) и с 10:00 до 16:00 (сб-вс)</p>
-                <p class="contacts__text">По Красноярскому времени (+4 часа)</p>
-              </div>
+          </div>
+          <div class="contacts__container">
+            <ul class="contacts__list">
+              <li class="contacts__list-item">Александр <a class="contacts__list-item-link" href="tel:+89135347377">+8(913)534-73-77</a></li>
+              <li class="contacts__list-item">Илья <a class="contacts__list-item-link" href="tel:+89135590420">+8(913)559-04-20</a></li>
+            </ul>
+            <div class="contacts__text-container">
+              <p class="contacts__text">Контакты доступны для связи в Whatsapp, Telegram, а такжу по мобильному телефону</p>
+              <p class="contacts__text">Рабочее время с 9:00 до 18:00 (пн-пт) и с 10:00 до 16:00 (сб-вс)</p>
+              <p class="contacts__text">По Красноярскому времени (+4 часа)</p>
             </div>
-          </section>
-          <section class="calculator">  
+          </div>
+        </section>
+        <section class="calculator">  
+          <div class="calculator__title-container">
             <h2 class="calculator__title">Рассчитайте стоимости авто</h2>
-            <div class="calculator__container">
-              <!-- Шаг 1: Выбор страны -->
-              <div class="step active" id="step1">
-                <h2>Выберите страну</h2>
-                <div class="country-selector">
-                    <div class="country-option" data-country="korea">
-                        <img src="./images/kr.png" alt="Корея">
-                        <div>Корея</div>
-                    </div>
-                    <div class="country-option" data-country="japan">
-                        <img src="https://flagcdn.com/w80/jp.png" alt="Япония">
-                        <div>Япония</div>
-                    </div>
-                    <div class="country-option" data-country="china">
-                        <img src="https://flagcdn.com/w80/cn.png" alt="Китай">
-                        <div>Китай</div>
-                    </div>
-                </div>
-                <button class="button button__next" id="nextBtn" disabled>Далее</button>
+          </div>  
+          <div class="calculator__container">
+            <div class="step active" id="step1">
+              <h2 class="step__title">Выберите страну</h2>
+              <div class="country-selector">
+                  <div class="country-option" data-country="korea">
+                      <img src="./images/kr.png" alt="Корея">
+                      <div>Корея</div>
+                  </div>
+                  <div class="country-option" data-country="japan">
+                      <img src="./images/jp.png" alt="Япония">
+                      <div>Япония</div>
+                  </div>
+                  <div class="country-option" data-country="china">
+                      <img src="./images/cn.png" alt="Китай">
+                      <div>Китай</div>
+                  </div>
               </div>
-            <!-- Шаг 2: Ввод параметров -->
-            <div class="step" id="step2">
-                <h2>Параметры автомобиля</h2>
-                <div class="form-group">
-                    <label>Тип двигателя</label>
-                    <select id="engineType">
-                        <option value="petrol">Бензин</option>
-                        <option value="diesel">Дизель</option>
-                        <option value="electric">Электро</option>
-                        <option value="diesel_hybrid">Дизельный гибрид</option>
-                        <option value="petrol_hybrid">Бензиновый гибрид</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label id="priceLabel">Стоимость авто</label>
-                    <input type="number" id="carPrice" value="10000000">
-                    <div class="currency-info" id="currencyInfo">₩ (воны)</div>
-                </div>
-                <div class="form-group">
-                    <label>Год выпуска</label>
-                    <input type="number" id="year" min="2000" max="2025" value="2021">
-                </div>
-                <div class="form-group">
-                    <label>Тип владельца</label>
-                    <select id="ownerType">
-                        <option value="individual">Физическое лицо</option>
-                        <option value="legal">Юридическое лицо</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Объем двигателя, см³</label>
-                    <input type="number" id="engineVolume" value="999">
-                </div>
-                <div class="form-group">
-                    <label>Мощность, л.с.</label>
-                    <input type="number" id="powerHp" value="100">
-                </div>
-                <div class="form-group" id="electricPowerGroup" style="display: none;">
-                    <label>Мощность электро, кВт.</label>
-                    <input type="number" id="electricPower" value="100">
-                </div>
-                <div class="form-group">
-                    <label>Курс валюты (руб)</label>
-                    <input type="number" id="exchangeRate" step="0.001" value="0.065">
-                    <div class="currency-info">Текущий курс к рублю</div>
-                </div>
-                <button onclick="calculateCost()">Рассчитать стоимость</button>
-                <button class="secondary" onclick="backToStep1()">Назад</button>
+              <button class="button button__next" id="nextBtn" disabled>Далее</button>
+          </div>
+          
+          <!-- Шаг 2: Ввод параметров -->
+          <div class="step" id="step2">
+              <h2 class="step__title">Параметры автомобиля</h2>
+              <div class="form-section">
+                  <div class="form-group">
+                      <label>Тип двигателя</label>
+                      <select id="engineType">
+                          <option value="petrol">Бензин</option>
+                          <option value="diesel">Дизель</option>
+                          <option value="electric">Электро</option>
+                          <option value="diesel_hybrid">Дизельный гибрид</option>
+                          <option value="petrol_hybrid">Бензиновый гибрид</option>
+                      </select>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label id="priceLabel">Стоимость авто</label>
+                      <input type="number" id="carPrice" value="1000000">
+                      <div class="currency-info" id="currencyInfo">₩ (воны)</div>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label>Год выпуска</label>
+                      <input type="number" id="year" min="2000" max="2025" value="2021">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label>Тип владельца</label>
+                      <select id="ownerType">
+                          <option value="individual">Физическое лицо</option>
+                          <option value="legal">Юридическое лицо</option>
+                      </select>
+                  </div>
               </div>
-            <!-- Шаг 3: Результаты -->
-            <div class="step" id="step3">
-                <h2>Результаты расчета</h2>
-                <div class="result" id="result">
-                    <h3>Итоговая стоимость:</h3>
-                    <p id="totalCost" style="font-size: 24px; font-weight: bold;"></p>
-                    <p id="details"></p>
-                    <p class="hidden-fee">*В стоимость включена комиссия компании за услуги в размере 35,000 ₽</p>
-                </div
-                <button class="secondary" onclick="backToStep2()">Вернуться к расчету</button>
-            </div>
-            </div>
-          </section>
-          <section class="maps">
+              
+              <div class="form-section" style="animation-delay: 0.1s">
+                  <div class="form-group">
+                      <label>Объем двигателя, см³</label>
+                      <input type="number" id="engineVolume" value="999">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label>Мощность, л.с.</label>
+                      <input type="number" id="powerHp" value="100">
+                  </div>
+                  
+                  <div class="form-group" id="electricPowerGroup" style="display: none;">
+                      <label>Мощность электро, кВт.</label>
+                      <input type="number" id="electricPower" value="100">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label>Курс валюты (руб)</label>
+                      <input type="number" id="exchangeRate" step="0.001" value="0.065">
+                      <div class="currency-info">Текущий курс к рублю</div>
+                  </div>
+              </div>
+              
+              <button class="button button__next" onclick="calculateCost()">Рассчитать стоимость</button>
+              <button class="button secondary button__next" onclick="backToStep1()">Назад</button>
+          </div>
+          
+          <!-- Шаг 3: Результаты -->
+          <div class="step" id="step3">
+              <h2 class="step__title">Результаты расчета</h2>
+              <div class="result" id="result">
+                  <h3>Итоговая стоимость:</h3>
+                  <div id="totalCost"></div>
+                  <div id="details"></div>
+              </div>
+              
+              <button class="button button__next secondary" onclick="backToStep2()">Вернуться к расчету</button>
+          </div>
+          </div>  
+        </section>
+        <section class="maps">
+          <div class="maps__title-container">
             <h2 class="maps__title">Мы здесь</h2>
-            <div class="maps__container">
+          </div>
+          <div class="maps__container">
 
-            </div>
-          </section>
-        </div>  
-        <footer class="footer">
-          <ul class="footer__list"> 
-            <li class="footer__list-item">
-              <a class="footer__list-item-link" href="#">
-                <img class="footer__list-item-image" 
-                    src="./icons/icon-telegram.svg" 
-                    alt="Логотип Telegram">
-              </a>
-            </li>
-            <li class="footer__list-item">
-              <a class="footer__list-item-link" href="#">
-                <img class="footer__list-item-image" 
-                    src="./icons/icon-whatsapp.svg"  
-                    alt="Логотип Whatsapp">
-              </a>
-            </li>
-            <li class="footer__list-item">
-              <a class="footer__list-item-link" href="#">
-                <img class="footer__list-item-image" 
-                    src="./icons/icon-instagram.svg" 
-                    alt="Логотип Instagram">
-              </a>
-            </li>
-            <li class="footer__list-item">
-              <a class="footer__list-item-link" href="#">
-                <img class="footer__list-item-image" 
-                    src="./icons/icon-phone.svg" 
-                    alt="Логотип телефонной трубки">
-              </a>
-            </li>
-          </ul>
-        </footer>
+          </div>
+        </section>
+      </div>  
+      <footer class="footer">
+        <ul class="footer__list"> 
+          <li class="footer__list-item">
+            <a class="footer__list-item-link" href="#">
+              <img class="footer__list-item-image" 
+                  src="./icons/icon-telegram.svg" 
+                  alt="Логотип Telegram">
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-item-link" href="#">
+              <img class="footer__list-item-image" 
+                  src="./icons/icon-whatsapp.svg"  
+                  alt="Логотип Whatsapp">
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-item-link" href="#">
+              <img class="footer__list-item-image" 
+                  src="./icons/icon-instagram.svg" 
+                  alt="Логотип Instagram">
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-item-link" href="#">
+              <img class="footer__list-item-image" 
+                  src="./icons/icon-phone.svg" 
+                  alt="Логотип телефонной трубки">
+            </a>
+          </li>
+        </ul>
+      </footer>
       </div>
     </main>
     <!-- Оверлей (размытый фон) -->
@@ -332,13 +398,13 @@
                 <option value="Япония">Япония</option>
             </select>
           </div>
-          <button type="submit" class="submit-btn">Отправить заявку</button>
+          <button type="submit" class="button submit-btn">Отправить заявку</button>
         </form>
       </div>
     </div>
     <script src="./js/script.js"></script>
     <script src="./js/fade-in.js"></script>
-    <script src="./js/faq.js"></script>
+    <script src="./js/faq.js"></script> 
     <script src="./js/modal.js"></script>
     <script src="./js/calc.js"></script>
   </body>
