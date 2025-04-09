@@ -373,8 +373,10 @@ header.shrink .header__logo-image {
 }
 
 .reviews-section {
+  display: flex;
+  flex-direction: column;
   max-width: 75%;
-  margin: 0 auto;
+  margin: 10% auto 10% auto;
   padding: 0 20px;
 }
 
@@ -413,10 +415,12 @@ header.shrink .header__logo-image {
 }
 
 .review-photo {
-  width: 80%;
+  width: 240px;
+  height: 260px;
   object-fit: cover;
   margin: 0 auto 15px;
   display: block;
+  border-radius: 15px;
   border: 1px solid #000;
 }
 
