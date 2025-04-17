@@ -14,16 +14,16 @@
   <body class="page">
     <header class="header" id="header">
       <div class="header__logo-container">
-          <a class="header__logo-link" href="#">
+          <a class="header__logo-link" href="/?t=12345">
           <img class="header__logo-image" 
-              src="./images/main-logo.png"
+              src="./images/main-logo.min.svg"
               alt="Логотип Авто Край">
           </a>
       </div>  
       <nav class="header__nav">
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="/?t=12345" id="home-link">Главная</a>
+            <a class="nav__list-item-link" href="#" id="home-link">Главная</a>
             </li>
           <li class="nav__list-item">
             <a class="nav__list-item-link" href="#section-advantages">Прeимущества</a>
@@ -32,7 +32,7 @@
             <a class="nav__list-item-link" href="#section-questions">Вопросы</a>
           </li>
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Отзывы</a>
+            <a class="nav__list-item-link" href="#section-reviews">Отзывы</a>
           </li>           
           <li class="nav__list-item">
             <a class="nav__list-item-link" href="#section-contacts">Контакты</a>
@@ -158,7 +158,7 @@
       </section>
       <div class="container-block">
         <div class="overlay"></div>
-        <section class="reviews-section">
+        <section class="reviews-section" id="section-reviews">
           <h2 class="section-title">Отзывы наших клиентов</h2>
           <div class="carousel-container">
               <button class="carousel-btn prev" disabled>
@@ -312,7 +312,7 @@
           <div class="step" id="step3">
               <h2 class="step__title">Результаты расчета</h2>
               <div class="result" id="result">
-                  <h3>Итоговая стоимость:</h3>
+                  <h3>Примерная итоговая стоимость:</h3>
                   <div id="totalCost"></div>
                   <div id="details"></div>
               </div>
@@ -326,7 +326,7 @@
             <h2 class="maps__title">Мы здесь</h2>
           </div>
           <div class="maps__container">
-
+            <iframe class="maps__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d4770985337f2bfe74f583d5257c091c773ceaefbdbbac81ec86c6cdd86cc4e&amp;source=constructor" frameborder="0"></iframe>
           </div>
         </section>
       </div>  
@@ -362,7 +362,7 @@
     <!-- Модальное окно с формой -->
     <div class="modal" id="orderModal">
       <div class="modal-header">
-        <img class="modal-header-image" src="./images/main-logo.png" alt="Логотип Авто Край">
+        <img class="modal-header-image" src="./images/main-logo.min.svg" alt="Логотип Авто Край">
         <button class="close-btn" id="closeModal">&times;</button>
       </div>
       <div class="modal-body">
