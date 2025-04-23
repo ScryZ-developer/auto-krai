@@ -10,6 +10,10 @@
     <title>Авто Край - Привоз авто из Кореи, Китая и Японии</title>
     <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
     <meta name="description" content="Привоз авто из Кореи, Китая и Японии. Подбор автомобиля и доставка до вашего города.">
+    <script src="./js/script.js"></script>
+    <script src="./js/fade-in.js"></script>
+    <script src="./js/calc.js"></script>
+    <script src="./js/review.js"></script>
   </head>
   <body class="page">
     <header class="header" id="header">
@@ -40,8 +44,12 @@
         </ul>
       </nav>
       <div class="header__rate">
-          <p class="header__rate-text">Курс валют</p>
-      </div>   
+        <div class="header__rate-container">
+            <div class="header__rate-item" data-currency="KRW"></div>
+            <div class="header__rate-item" data-currency="JPY"></div>
+            <div class="header__rate-item" data-currency="CNY"></div>
+        </div>
+    </div>  
     </header>
     <main class="content">
       <section class="cover">
@@ -395,11 +403,8 @@
         </form>
       </div>
     </div>
-    <script src="./js/script.js"></script>
-    <script src="./js/fade-in.js"></script>
-    <script src="./js/faq.js"></script> 
+    <script src="./js/money.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/calc.js"></script>
-    <script src="./js/review.js"></script>
+    <script src="./js/faq.js"></script> 
   </body>
 </html>
