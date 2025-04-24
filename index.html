@@ -10,10 +10,6 @@
     <title>Авто Край - Привоз авто из Кореи, Китая и Японии</title>
     <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
     <meta name="description" content="Привоз авто из Кореи, Китая и Японии. Подбор автомобиля и доставка до вашего города.">
-    <script src="./js/script.js"></script>
-    <script src="./js/fade-in.js"></script>
-    <script src="./js/calc.js"></script>
-    <script src="./js/review.js"></script>
   </head>
   <body class="page">
     <header class="header" id="header">
@@ -49,7 +45,31 @@
             <div class="header__rate-item" data-currency="JPY"></div>
             <div class="header__rate-item" data-currency="CNY"></div>
         </div>
-    </div>  
+      </div>  
+      <div class="burger-menu" id="burgerMenu">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+      </div>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__list-item">
+            <a class="mobile-nav__list-item-link" href="#" id="mobile-home-link">Главная</a>
+          </li>
+          <li class="mobile-nav__list-item">
+            <a class="mobile-nav__list-item-link" href="#section-advantages">Преимущества</a>
+          </li>
+          <li class="mobile-nav__list-item">
+            <a class="mobile-nav__list-item-link" href="#section-questions">Вопросы</a>
+          </li>
+          <li class="mobile-nav__list-item">
+            <a class="mobile-nav__list-item-link" href="#section-reviews">Отзывы</a>
+          </li>
+          <li class="mobile-nav__list-item">
+            <a class="mobile-nav__list-item-link" href="#section-contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="content">
       <section class="cover">
@@ -403,8 +423,13 @@
         </form>
       </div>
     </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/fade-in.js"></script>
+    <script src="./js/calc.js"></script>
+    <script src="./js/review.js"></script>
     <script src="./js/money.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/faq.js"></script> 
+    <script src="./js/faq.js"></script>
+    <script src="./js/mobile-menu.js"></script> 
   </body>
 </html>
