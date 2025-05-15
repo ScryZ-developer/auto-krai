@@ -79,6 +79,14 @@ header.shrink .header__logo-image {
   transform: scale(1.04);
 }
 
+.button__toggle {
+  position: absolute;
+  display: flex;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+}
+
 .header__rate {
   margin-left: 52%;
   font-size: 18px;
@@ -358,6 +366,16 @@ header.shrink .header__logo-image {
   background: url(../images/questions-bg.jpg);
   z-index: 9;
 }
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  margin: 10% auto 10% auto;
+  padding: 0 20px;
+  z-index: 9;
+}
+
 
 .reviews-section {
   display: flex;
@@ -897,8 +915,6 @@ body.modal-open {
 .footer__list-item-image {
   width: 5vw;
 }
-
-
 
 /* Кастомный скроллбар */
 .page::-webkit-scrollbar {
