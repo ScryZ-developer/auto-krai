@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" id="htmlLang">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./styles/globals.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
-    <title>Авто Край - Привоз авто из Кореи, Китая и Японии</title>
+    <title id="pageTitle">Авто Край - Привоз авто из Кореи, Китая и Японии</title>
     <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
-    <meta name="description" content="Привоз авто из Кореи, Китая и Японии. Подбор автомобиля и доставка до вашего города.">
+    <meta name="description" content="Привоз авто из Кореи, Китая и Японии. Подбор автомобиля и доставка до вашего города." id="metaDescription">
   </head>
   <body class="page">
     <header class="header" id="header">
@@ -18,7 +18,7 @@
           <a class="header__logo-link" href="/?t=12345">
           <img class="header__logo-image" 
               src="./images/main-logo.min.svg"
-              alt="Логотип Авто Край">
+              alt="Логотип Авто Край" id="logoAlt">
           </a>
       </div>  
       <nav class="header__nav">
@@ -27,19 +27,19 @@
             <a class="nav__list-item-link" href="#" id="home-link">Главная</a>
             </li>
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#section-advantages">Прeимущества</a>
+            <a class="nav__list-item-link" href="#section-advantages" id="advantages-link">Прeимущества</a>
           </li>
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#section-questions">Вопросы</a>
+            <a class="nav__list-item-link" href="#section-questions" id="questions-link">Вопросы</a>
           </li>
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#section-reviews">Отзывы</a>
+            <a class="nav__list-item-link" href="#section-reviews" id="reviews-link">Отзывы</a>
           </li>           
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#section-contacts">Контакты</a>
+            <a class="nav__list-item-link" href="#section-contacts" id="contacts-link">Контакты</a>
           </li>
         </ul>
-        <button class="button button__toggle" id="langToggle">EN</button>
+        <button class="button button__toggle" id="langToggle">BY</button>
       </nav>
       <div class="header__rate">
         <div class="header__rate-container">
@@ -59,72 +59,72 @@
             <a class="mobile-nav__list-item-link" href="#" id="mobile-home-link">Главная</a>
           </li>
           <li class="mobile-nav__list-item">
-            <a class="mobile-nav__list-item-link" href="#section-advantages">Преимущества</a>
+            <a class="mobile-nav__list-item-link" href="#section-advantages" id="mobile-advantages-link">Преимущества</a>
           </li>
           <li class="mobile-nav__list-item">
-            <a class="mobile-nav__list-item-link" href="#section-questions">Вопросы</a>
+            <a class="mobile-nav__list-item-link" href="#section-questions" id="mobile-questions-link">Вопросы</a>
           </li>
           <li class="mobile-nav__list-item">
-            <a class="mobile-nav__list-item-link" href="#section-reviews">Отзывы</a>
+            <a class="mobile-nav__list-item-link" href="#section-reviews" id="mobile-reviews-link">Отзывы</a>
           </li>
           <li class="mobile-nav__list-item">
-            <a class="mobile-nav__list-item-link" href="#section-contacts">Контакты</a>
+            <a class="mobile-nav__list-item-link" href="#section-contacts" id="mobile-contacts-link">Контакты</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="content">
       <section class="cover">
-        <h1 class="cover__title">Авто Край</h1>
-        <p class="cover__subtitle">Авто из Кореи, Китая и Японии</p>
+        <h1 class="cover__title" id="coverTitle">Авто Край</h1>
+        <p class="cover__subtitle" id="coverSubtitle">Авто из Кореи, Китая и Японии</p>
         <button class="button button__order" id="openFormBtn">Заказать авто</button>
       </section>
       <section class="advantages" id="section-advantages">
         <div class="overlay"></div>
         <div class="advantages__container">
           <div class="advantages__title-container fade-in">
-            <h2 class="advantages__title">Почему мы</h2>
+            <h2 class="advantages__title" id="advantagesTitle">Почему мы</h2>
           </div>
           <ul class="advantages__list fade-in">
             <li class="advantages__list-item">
               <img class="advantages__list-item-image" 
                   src="./icons/icon-1.svg" 
-                  alt="Значок-лист списком">
-              <h3 class="advantages__list-item-title">Общее</h3>
-              <p class="advantages__list-item-text">
+                  alt="Значок-лист списком" id="icon1Alt">
+              <h3 class="advantages__list-item-title" id="advantage1Title">Общее</h3>
+              <p class="advantages__list-item-text" id="advantage1Text">
                 Безупречное исполнение работы, много довольных клиентов, более 20 лет на рынке
               </p>
             </li>
             <li class="advantages__list-item">
               <img class="advantages__list-item-image" 
                   src="./icons/icon-2.svg" 
-                  alt="Значок-галочка">
-              <h3 class="advantages__list-item-title">Сопровождение</h3>
-              <p class="advantages__list-item-text">
+                  alt="Значок-галочка" id="icon2Alt">
+              <h3 class="advantages__list-item-title" id="advantage2Title">Сопровождение</h3>
+              <p class="advantages__list-item-text" id="advantage2Text">
                 Полное сопровождение от оформления заказа до вручения автомобиля
               </p>
             </li>
             <li class="advantages__list-item">
               <img class="advantages__list-item-image" 
                   src="./icons/icon-3.svg" 
-                  alt="Значок-денежный мешочек">
-              <h3 class="advantages__list-item-title">Выгода</h3>
-              <p class="advantages__list-item-text">Выгода до 40% при привозе автомобиля с учетом всех налогов и доставок</p>
+                  alt="Значок-денежный мешочек" id="icon3Alt">
+              <h3 class="advantages__list-item-title" id="advantage3Title">Выгода</h3>
+              <p class="advantages__list-item-text" id="advantage3Text">Выгода до 40% при привозе автомобиля с учетом всех налогов и доставок</p>
             </li>
           </ul>
-        </div>  
+        </div> 
       </section>
       <section class="questions" id="section-questions">
         <div class="overlay"></div>
         <div class="questions__container fade-in">
-          <h2 class="questions__title">FAQ - часто задаваемые вопросы</h2>
+          <h2 class="questions__title" id="questionsTitle">FAQ - часто задаваемые вопросы</h2>
           <div class="questions__item">
               <button class="questions__header">
-                  Какие документы требуются для оформления автомобиля?
+                  <span id="question1">Какие документы требуются для оформления автомобиля?</span>
                   <span class="questions__icon">></span>
               </button>
               <div class="questions__content">
-                  <p>Для таможенного оформления потребуются: <br>
+                  <p id="answer1">Для таможенного оформления потребуются: <br>
                     Паспорт транспортного средства (PTS) или его иностранный аналог <br>          
                     Договор купли-продажи <br>
                     Сертификат соответствия <br>
@@ -134,11 +134,11 @@
           </div>
           <div class="questions__item">
             <button class="questions__header">
-                Сколько времени занимает доставка авто из Кореи/Японии/Китая?
+                <span id="question2">Сколько времени занимает доставка авто из Кореи/Японии/Китая?</span>
                 <span class="questions-icon">></span>
             </button>
             <div class="questions__content">
-                <p>Корея: 25-35 дней <br>
+                <p id="answer2">Корея: 25-35 дней <br>
                   Япония: 25-30 дней <br>
                   Китай: 30-45 дней <br>
                   Примечание: Сроки могут увеличиться из-за таможенного оформления</p>
@@ -146,11 +146,11 @@
           </div>
           <div class="questions__item">
             <button class="questions__header">
-                Какие скрытые платежи могут быть при покупке?
+                <span id="question3">Какие скрытые платежи могут быть при покупке?</span>
                 <span class="accordion-icon">></span>
             </button>
             <div class="questions__content">
-                <p>Наша компания проводит максимально прозрачную сделку <br>
+                <p id="answer3">Наша компания проводит максимально прозрачную сделку <br>
                   Но, помимо стоимости авто, учитывайте: <br>
                   Таможенные пошлины (10-15% от стоимости) <br>
                   Утилизационный сбор (3-5%) <br>
@@ -160,11 +160,11 @@
           </div>
           <div class="questions__item">
             <button class="questions__header">
-                Можно ли проверить машину до оплаты?
+                <span id="question4">Можно ли проверить машину до оплаты?</span>
                 <span class="questions__icon">></span>
             </button>
             <div class="questions__content">
-                <p>Да! Мы предоставляем: <br>
+                <p id="answer4">Да! Мы предоставляем: <br>
                   Фото и видеоотчеты (включая пробег, салон, двигатель) <br>
                   Диагностику через OBD-сканер (проверка ошибок) <br>
                   Выездной осмотр при подборе авто</p>
@@ -172,11 +172,11 @@
           </div>
           <div class="questions__item">
             <button class="questions__header">
-                Какие документы я получу?
+                <span id="question5">Какие документы я получу?</span>
                 <span class="questions__icon">></span>
             </button>
             <div class="questions__content">
-                <p>Полный пакет: <br>
+                <p id="answer5">Полный пакет: <br>
                   Договор купли-продажи (нотариально заверенный) <br>           
                   Инвойс с указанием стоимости <br>
                   Сертификат соответствия ТР ТС <br>
@@ -184,17 +184,152 @@
                   ПТС российского образца</p>
             </div>
           </div>
-          <button class="button button__order button__order-accordion" id="openFormBtn">Заказать авто</button>
+          <button class="button button__order button__order-accordion" id="openFormBtn2">Заказать авто</button>
       </section>
       <div class="container-block">
         <div class="overlay"></div>
-        <section class="news-section" id="section-news">
-          <h2 class="section-title">Новости</h2>
-          <div class="news-container">
-            
+        <section class="steps-carousel-section">
+          <div class="container">
+            <h2 class="section-title">Как мы работаем</h2>
+            <div class="steps-carousel">
+              <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#bcfd4c" width="60px">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                  </svg>
+                </div>
+                <h3 class="step-title">Подбор автомобиля</h3>
+                <div class="step-desc">
+                  <p>Помогаем выбрать авто на аукционах Кореи, Японии или у китайских дилеров</p>
+                  <ul class="step-features">
+                    <li>Подбор по вашим параметрам</li>
+                    <li>Проверка истории</li>
+                    <li>Фото- и видеоотчет</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#bcfd4c" width="60px">
+                    <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"/>
+                  </svg>
+                </div>
+                <h3 class="step-title">Покупка и логистика</h3>
+                <div class="step-desc">
+                  <p>Организуем безопасную сделку и доставку</p>
+                  <ul class="step-features">
+                    <li>Участие в аукционах</li>
+                    <li>Договор купли-продажи</li>
+                    <li>Доставка морем/ж/д</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#bcfd4c" width="60px">
+                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                  </svg>
+                </div>
+                <h3 class="step-title">Таможенное оформление</h3>
+                <div class="step-desc">
+                  <p>Полное сопровождение на таможне</p>
+                  <ul class="step-features">
+                    <li>Расчет пошлин</li>
+                    <li>ЭПТС</li>
+                    <li>СБКТС (при необходимости)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#bcfd4c" width="60px">
+                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                  </svg>
+                </div>
+                <h3 class="step-title">Получение авто</h3>
+                <div class="step-desc">
+                  <p>Авто у вас!</p>
+                  <ul class="step-features">
+                    <li>Доставка в ваш город</li>
+                    <li>Помощь в регистрации</li>
+                    <li>Гарантийное обслуживание</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-prev" aria-label="Previous">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                  <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="#bcfd4c"/>
+                </svg>
+              </button>
+              <div class="carousel-dots"></div>
+              <button class="carousel-next" aria-label="Next">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="#bcfd4c"/>
+                </svg>
+              </button>
+            </div>
           </div>
+        </section>
+        <section class="news-section" id="section-news">
+          <h2 class="section-title" id="newsTitle">Новости</h2>
+          <div class="news__container">
+            <div class="news__container-header">
+              <h3 class="news__title news__accent">Новые таможенные правила для авто из Китая, Кореи и Японии: что изменилось в 2024 году?</h3>
+              <p class="news__text">В 2024 году вступили в силу новые таможенные правила, которые могут повлиять на стоимость и условия ввоза автомобилей из Китая, Южной Кореи и Японии. Разбираем ключевые изменения, которые важно учитывать при покупке авто из Азии.</p>
+            </div>
+            <div class="news__container-section">
+              <ul class="news__list">
+                <li class="news__list-item">
+                  <p class="news__list-item-text">
+                    <span class="news__accent">1. Пересмотр таможенных пошлин</span><br>
+                    Для электромобилей сохранены льготные ставки (0% пошлина до конца 2024 года). <br>
+                    Для бензиновых и дизельных авто пошлины остались на прежнем уровне, но возможна индексация в зависимости от курса валют. <br>
+                    Гибриды теперь облагаются пошлиной как обычные авто (ранее были льготы).</p> 
+                </li>
+                <li>
+                  <p class="news__list-item-text">
+                    <span class="news__accent">2. Ужесточение экологических норм</span> <br>
+                    С 1 июля 2024 года введен запрет на ввоз авто ниже экологического класса Евро-5 (касается подержанных машин). <br>
+                    Для новых авто из Китая и Кореи требуется дополнительный экологический сертификат.
+                  </p>
+                </li>
+                <li class="news__list-item">
+                  <p class="news__list-item-text">
+                    <span class="news__accent">3. Новые требования к оформлению </span><br>
+                    Обязательная электронная декларация через систему ЕАЭС (упрощает процесс, но требует точных данных). <br>
+                    Жесткий контроль за "распилами" – теперь сложнее ввезти авто в разобранном виде.
+                  </p>
+                </li>
+                <li class="news__list-item">
+                  <p class="news__list-item-text">
+                    <span class="news__accent">4. Изменения в ПТС и сертификации </span> <br>
+                    Для легализации авто теперь нужен подробный отчет о техническом состоянии (особенно для машин с аукционов Японии и Кореи). <br>
+                    Упрощена процедура для новых китайских марок (BYD, Geely, Changan). <br>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="news__container-footer">
+              <h3 class="news__footer-title news__accent">Что это значит для покупателей?</h3>
+              <p class="news__footer-text">
+                ✅ Электромобили по-прежнему выгодны – нулевая пошлина сохраняется. <br>
+                ⚠️ Подержанные авто с пробегом сложнее растаможить – ужесточены экологические требования. <br>
+                📌 Важно проверять документы перед покупкой – новые правила повышают риски при ввозе "серых" авто. <br>
+                Следите за обновлениями – мы оперативно сообщим о новых изменениях! <br>
+                🚗 Хотите подобрать авто с учетом новых правил? <br>  
+                👉 <span class="news__accent">[Оставьте заявку]</span> – поможем с выбором и оформлением!
+              </p>
+            </div>
+          </div>  
+        </section>  
         <section class="reviews-section" id="section-reviews">
-          <h2 class="section-title">Отзывы наших клиентов</h2>
+          <h2 class="section-title" id="reviewsTitle">Отзывы наших клиентов</h2>
           <div class="carousel-container">
             <button class="carousel-btn prev" disabled>
                 <svg viewBox="0 0 24 24">
@@ -205,34 +340,29 @@
               <div class="review-card">
                 <img src="./images/Photo-1.jpg" alt="Фото клиента" class="review-photo">
                 <h3 class="review-name">Ирина</h3>
-                <p class="review-text">Отличный сервис! Быстро, качественно и профессионально. Рекомендую всем своим знакомым. Очень довольна результатом.</p>
-              </div>
-              
+                <p class="review-text" id="review1">Отличный сервис! Быстро, качественно и профессионально. Рекомендую всем своим знакомым. Очень довольна результатом.</p>
+              </div>  
               <div class="review-card">
                 <img src="./images/Photo-2.JPG" alt="Фото клиента" class="review-photo">
                 <h3 class="review-name">Илья</h3>
-                <p class="review-text">Работа выполнена в срок и даже раньше. Качество на высшем уровне. Буду обращаться еще и советовать друзьям.</p>
+                <p class="review-text" id="review2">Работа выполнена в срок и даже раньше. Качество на высшем уровне. Буду обращаться еще и советовать друзьям.</p>
               </div>
-              
               <div class="review-card">
                 <img src="./images/Photo-3.JPG" alt="Фото клиента" class="review-photo">
                 <h3 class="review-name">Алексей</h3>
-                <p class="review-text">Приятно удивлена уровнем сервиса. Все вопросы решались оперативно, персонал вежливый и компетентный.</p>
+                <p class="review-text" id="review3">Приятно удивлена уровнем сервиса. Все вопросы решались оперативно, персонал вежливый и компетентный.</p>
               </div>
-              
               <div class="review-card">
                 <img src="./images/Photo-4.JPG" alt="Фото клиента" class="review-photo">
                 <h3 class="review-name">Александр</h3>
-                <p class="review-text">Очень профессиональный подход. Учли все пожелания и предложили оптимальное решение. Спасибо за работу!</p>
+                <p class="review-text" id="review4">Очень профессиональный подход. Учли все пожелания и предложили оптимальное решение. Спасибо за работу!</p>
             </div>
-              
               <div class="review-card">
                 <img src="./images/Photo-5.jpg" alt="Фото клиента" class="review-photo">
                 <h3 class="review-name">Антон</h3>
-                <p class="review-text">Все просто прекрасно! От первого контакта до завершения работы. Обязательно вернусь снова. Лучший сервис в городе!</p>
+                <p class="review-text" id="review5">Все просто прекрасно! От первого контакта до завершения работы. Обязательно вернусь снова. Лучший сервис в городе!</p>
               </div>
             </div>
-            
             <button class="carousel-btn next">
               <svg viewBox="0 0 24 24">
                 <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
@@ -243,7 +373,7 @@
       <div class="section-container">
         <section class="contacts" id="section-contacts">
           <div class="contacts__title-container">
-            <h2 class="contacts__title">Контакты</h2>
+            <h2 class="contacts__title" id="contactsTitle">Контакты</h2>
           </div>
           <div class="contacts__container">
             <ul class="contacts__list">
@@ -251,46 +381,46 @@
               <li class="contacts__list-item">Илья <a class="contacts__list-item-link" href="tel:+89135590420">+8(913)559-04-20</a></li>
             </ul>
             <div class="contacts__text-container">
-              <p class="contacts__text">Контакты доступны для связи в Whatsapp, Telegram, а такжу по мобильному телефону</p>
-              <p class="contacts__text">Рабочее время с 9:00 до 18:00 (пн-пт) и с 10:00 до 16:00 (сб-вс)</p>
-              <p class="contacts__text">По Красноярскому времени (+4 часа)</p>
+              <p class="contacts__text" id="contactsText1">Контакты доступны для связи в Whatsapp, Telegram, а такжу по мобильному телефону</p>
+              <p class="contacts__text" id="contactsText2">Рабочее время с 9:00 до 18:00 (пн-пт) и с 10:00 до 16:00 (сб-вс)</p>
+              <p class="contacts__text" id="contactsText3">По Красноярскому времени (+4 часа)</p>
             </div>
           </div>
         </section>
         <section class="calculator">  
           <div class="calculator__title-container">
-            <h2 class="calculator__title">Рассчитайте стоимости авто</h2>
+            <h2 class="calculator__title" id="calculatorTitle">Рассчитайте стоимости авто</h2>
           </div>  
           <div class="calculator__container">
             <div class="step active" id="step1">
-              <h2 class="step__title">Выберите страну</h2>
+              <h2 class="step__title" id="step1Title">Выберите страну</h2>
               <div class="country-selector">
                 <div class="country-option" data-country="korea">
                   <img src="./icons/kr.png" alt="Корея">
-                  <p>Корея</p>
+                  <p id="koreaLabel">Корея</p>
                 </div>
                 <div class="country-option" data-country="japan">
                   <img src="./icons/jp.png" alt="Япония">
-                  <p>Япония</p>
+                  <p id="japanLabel">Япония</p>
                 </div>
                 <div class="country-option" data-country="china">
                   <img src="./icons/cn.png" alt="Китай">
-                  <p>Китай</p>
+                  <p id="chinaLabel">Китай</p>
                 </div>
               </div>
-              <button class="button button__next" id="nextBtn" disabled>Далее</button>
+              <button class="button button__next" id="nextBtn" disabled id="nextButton">Далее</button>
           </div>
           <div class="step" id="step2">
-              <h2 class="step__title">Параметры автомобиля</h2>
+              <h2 class="step__title" id="step2Title">Параметры автомобиля</h2>
               <div class="form-section">
                   <div class="form-group">
-                      <label>Тип двигателя</label>
+                      <label id="engineTypeLabel">Тип двигателя</label>
                       <select id="engineType">
-                          <option value="petrol">Бензин</option>
-                          <option value="diesel">Дизель</option>
-                          <option value="electric">Электро</option>
-                          <option value="diesel_hybrid">Дизельный гибрид</option>
-                          <option value="petrol_hybrid">Бензиновый гибрид</option>
+                          <option value="petrol" id="petrolOption">Бензин</option>
+                          <option value="diesel" id="dieselOption">Дизель</option>
+                          <option value="electric" id="electricOption">Электро</option>
+                          <option value="diesel_hybrid" id="dieselHybridOption">Дизельный гибрид</option>
+                          <option value="petrol_hybrid" id="petrolHybridOption">Бензиновый гибрид</option>
                       </select>
                   </div>
                   
@@ -301,62 +431,54 @@
                   </div>
                   
                   <div class="form-group">
-                      <label>Год выпуска</label>
+                      <label id="yearLabel">Год выпуска</label>
                       <input type="number" id="year" min="2000" max="2025" value="2021">
                   </div>
-                  
                   <div class="form-group">
-                      <label>Тип владельца</label>
+                      <label id="ownerTypeLabel">Тип владельца</label>
                       <select id="ownerType">
-                          <option value="individual">Физическое лицо</option>
-                          <option value="legal">Юридическое лицо</option>
+                          <option value="individual" id="individualOption">Физическое лицо</option>
+                          <option value="legal" id="legalOption">Юридическое лицо</option>
                       </select>
                   </div>
               </div>
-              
               <div class="form-section" style="animation-delay: 0.1s">
                   <div class="form-group">
-                      <label>Объем двигателя, см³</label>
+                      <label id="engineVolumeLabel">Объем двигателя, см³</label>
                       <input type="number" id="engineVolume" value="999">
                   </div>
-                  
                   <div class="form-group">
-                      <label>Мощность, л.с.</label>
+                      <label id="powerHpLabel">Мощность, л.с.</label>
                       <input type="number" id="powerHp" value="100">
                   </div>
-                  
                   <div class="form-group" id="electricPowerGroup" style="display: none;">
-                      <label>Мощность электро, кВт.</label>
+                      <label id="electricPowerLabel">Мощность электро, кВт.</label>
                       <input type="number" id="electricPower" value="100">
                   </div>
-                  
                   <div class="form-group">
-                      <label>Курс валюты (руб)</label>
+                      <label id="exchangeRateLabel">Курс валюты (руб)</label>
                       <input type="number" id="exchangeRate" step="0.001" value="0.065">
-                      <div class="currency-info">Текущий курс к рублю</div>
+                      <div class="currency-info" id="exchangeRateInfo">Текущий курс к рублю</div>
                   </div>
               </div>
-              
-              <button class="button button__next" onclick="calculateCost()">Рассчитать стоимость</button>
-              <button class="button secondary button__next" onclick="backToStep1()">Назад</button>
-          </div>
-          
+                <button class="button button__next" onclick="calculateCost()" id="calculateButton">Рассчитать стоимость</button>
+              <button class="button secondary button__next" onclick="backToStep1()" id="backButton1">Назад</button>
+          </div>    
           <!-- Шаг 3: Результаты -->
           <div class="step" id="step3">
-              <h2 class="step__title">Результаты расчета</h2>
+              <h2 class="step__title" id="step3Title">Результаты расчета</h2>
               <div class="result" id="result">
-                  <h3>Примерная итоговая стоимость:</h3>
+                  <h3 id="resultTitle">Примерная итоговая стоимость:</h3>
                   <div id="totalCost"></div>
                   <div id="details"></div>
               </div>
-              
-              <button class="button button__next secondary" onclick="backToStep2()">Вернуться к расчету</button>
+              <button class="button button__next secondary" onclick="backToStep2()" id="backButton2">Вернуться к расчету</button>
           </div>
           </div>  
         </section>
         <section class="maps">
           <div class="maps__title-container">
-            <h2 class="maps__title">Мы здесь</h2>
+            <h2 class="maps__title" id="mapsTitle">Мы здесь</h2>
           </div>
           <div class="maps__container">
             <iframe class="maps__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d4770985337f2bfe74f583d5257c091c773ceaefbdbbac81ec86c6cdd86cc4e&amp;source=constructor" frameborder="0"></iframe>
@@ -369,21 +491,21 @@
             <a class="footer__list-item-link" target="_blank" href="https://t.me/scryzbtw">
               <img class="footer__list-item-image" 
                   src="./icons/icon-telegram.min.svg" 
-                  alt="Логотип Telegram">
+                  alt="Логотип Telegram" id="telegramAlt">
             </a>
           </li>
           <li class="footer__list-item">
             <a class="footer__list-item-link" target="_blank" href="https://wa.me/79135590420">
               <img class="footer__list-item-image" 
                   src="./icons/icon-whatsapp.min.svg"  
-                  alt="Логотип Whatsapp">
+                  alt="Логотип Whatsapp" id="whatsappAlt">
             </a>
           </li>
           <li class="footer__list-item">
             <a class="footer__list-item-link" target="_blank" href="https://www.instagram.com/auto_krai">
               <img class="footer__list-item-image" 
                   src="./icons/icon-instagram.min.svg" 
-                  alt="Логотип Instagram">
+                  alt="Логотип Instagram" id="instagramAlt">
             </a>
           </li>
         </ul>
@@ -395,36 +517,36 @@
     <!-- Модальное окно с формой -->
     <div class="modal" id="orderModal">
       <div class="modal-header">
-        <img class="modal-header-image" src="./images/main-logo.min.svg" alt="Логотип Авто Край">
+        <img class="modal-header-image" src="./images/main-logo.min.svg" alt="Логотип Авто Край" id="modalLogoAlt">
         <button class="close-btn" id="closeModal">&times;</button>
       </div>
       <div class="modal-body">
         <form id="carOrderForm">
           <div class="form-group">
-            <input type="text" id="name" name="name" required placeholder="Ваше имя:">
+            <input type="text" id="name" name="name" required placeholder="Ваше имя:" id="namePlaceholder">
           </div>
           <div class="form-group">
-            <input type="tel" id="phone" name="phone" required placeholder="Ваш телефон:">
+            <input type="tel" id="phone" name="phone" required placeholder="Ваш телефон:" id="phonePlaceholder">
           </div>
           <div class="form-group">
-            <input type="text" id="city" name="city" required placeholder="Ваш город:">
+            <input type="text" id="city" name="city" required placeholder="Ваш город:" id="cityPlaceholder">
           </div>
           <div class="form-group">
-            <input type="text" id="carModel" name="carModel" required placeholder="Какой автомобиль интересует:">
+            <input type="text" id="carModel" name="carModel" required placeholder="Какой автомобиль интересует:" id="carModelPlaceholder">
           </div>
           <div class="form-group budget-input">
-            <input type="number" id="budget" name="budget" placeholder="Укажите ваш бюджет в рублях">
+            <input type="number" id="budget" name="budget" placeholder="Укажите ваш бюджет в рублях" id="budgetPlaceholder">
           </div>
           <div class="form-group">
-            <h3 class="form-group-title">Из какой страны будет автомобиль?</h3>
+            <h3 class="form-group-title" id="countrySelectTitle">Из какой страны будет автомобиль?</h3>
             <select id="country" name="country" required>
-                <option value="">Выберите страну</option>
-                <option value="Корея">Корея</option>
-                <option value="Китай">Китай</option>
-                <option value="Япония">Япония</option>
+                <option value="" id="selectCountryOption">Выберите страну</option>
+                <option value="Корея" id="koreaOption">Корея</option>
+                <option value="Китай" id="chinaOption">Китай</option>
+                <option value="Япония" id="japanOption">Япония</option>
             </select>
           </div>
-          <button type="submit" class="button submit-btn">Отправить заявку</button>
+          <button type="submit" class="button submit-btn" id="submitButton">Отправить заявку</button>
         </form>
       </div>
     </div>
@@ -437,5 +559,6 @@
     <script src="./js/faq.js"></script>
     <script src="./js/mobile-menu.js"></script> 
     <script src="./js/lang.js"></script>
+    <script src="./js/steps.js"></script>
   </body>
 </html>

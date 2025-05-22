@@ -1,66 +1,275 @@
-const translations = {
-  en: {
-    cover_title: "Auto Krai",
-    cover_subtitle: "Cars from Korea, China and Japan",
-    order_car: "Order a car",
-    why_us: "Why us",
-    advantage_general: "General",
-    advantage_general_text: "Flawless service, many happy clients, 20+ years on the market",
-    advantage_support: "Support",
-    advantage_support_text: "Full support from order to delivery",
-    advantage_saving: "Benefit",
-    advantage_saving_text: "Up to 40% savings including all fees and delivery",
-    faq: "FAQ - Frequently Asked Questions",
-    news: "News",
-    reviews: "Client Reviews",
-    contacts: "Contacts",
-    contacts_info: "Available via WhatsApp, Telegram and phone",
-    contacts_hours: "Working hours: 9:00–18:00 (Mon–Fri), 10:00–16:00 (Sat–Sun)",
-    contacts_timezone: "Krasnoyarsk Time (+4 UTC)",
-    calc_title: "Calculate car cost",
-    step_country: "Choose a country",
-    country_korea: "Korea",
-    country_japan: "Japan",
-    country_china: "China",
-    next: "Next",
-    step_params: "Vehicle Parameters",
-    engine_type: "Engine type",
-    engine_petrol: "Petrol",
-    engine_diesel: "Diesel",
-    engine_electric: "Electric",
-    engine_diesel_hybrid: "Diesel hybrid",
-    engine_petrol_hybrid: "Petrol hybrid",
-    car_price: "Car price",
-    currency_won: "₩ (won)",
-    year: "Year of manufacture",
-    owner_type: "Owner type",
-    owner_individual: "Individual",
-    owner_legal: "Legal entity",
-    engine_volume: "Engine volume, cc",
-    power_hp: "Horsepower",
-    electric_power: "Electric power, kW",
-    exchange_rate: "Exchange rate (RUB)",
-    currency_rate_info: "Current rate to RUB",
-    calc: "Calculate",
-    back: "Back",
-    results: "Calculation results",
-    approx_total: "Approximate total cost:",
-    back_to_calc: "Return to calculation",
-    we_are_here: "We are here"
-  },
-  ru: {
-    // Русский уже используется по умолчанию в HTML
-  }
-};
-
-let currentLang = 'ru';
-document.getElementById('langToggle').addEventListener('click', () => {
-  currentLang = currentLang === 'ru' ? 'en' : 'ru';
-  document.getElementById('langToggle').innerText = currentLang === 'ru' ? 'EN' : 'RU';
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[currentLang][key]) {
-      el.textContent = translations[currentLang][key];
-    }
-  });
-});
+// Добавляем новый скрипт для перевода
+      document.addEventListener('DOMContentLoaded', function() {
+        const langToggle = document.getElementById('langToggle');
+        let currentLang = 'ru'; // По умолчанию русский
+        
+        // Словарь переводов
+        const translations = {
+          'ru': {
+            // Общие элементы
+            'pageTitle': 'Авто Край - Привоз авто из Кореи, Китая и Японии',
+            'metaDescription': 'Привоз авто из Кореи, Китая и Японии. Подбор автомобиля и доставка до вашего города.',
+            'logoAlt': 'Логотип Авто Край',
+            'telegramAlt': 'Логотип Telegram',
+            'whatsappAlt': 'Логотип Whatsapp',
+            'instagramAlt': 'Логотип Instagram',
+            'modalLogoAlt': 'Логотип Авто Край',
+            
+            // Навигация
+            'home-link': 'Главная',
+            'mobile-home-link': 'Главная',
+            'advantages-link': 'Преимущества',
+            'mobile-advantages-link': 'Преимущества',
+            'questions-link': 'Вопросы',
+            'mobile-questions-link': 'Вопросы',
+            'reviews-link': 'Отзывы',
+            'mobile-reviews-link': 'Отзывы',
+            'contacts-link': 'Контакты',
+            'mobile-contacts-link': 'Контакты',
+            
+            // Основной контент
+            'coverTitle': 'Авто Край',
+            'coverSubtitle': 'Авто из Кореи, Китая и Японии',
+            'openFormBtn': 'Заказать авто',
+            'openFormBtn2': 'Заказать авто',
+            
+            // Преимущества
+            'advantagesTitle': 'Почему мы',
+            'icon1Alt': 'Значок-лист списком',
+            'advantage1Title': 'Общее',
+            'advantage1Text': 'Безупречное исполнение работы, много довольных клиентов, более 20 лет на рынке',
+            'icon2Alt': 'Значок-галочка',
+            'advantage2Title': 'Сопровождение',
+            'advantage2Text': 'Полное сопровождение от оформления заказа до вручения автомобиля',
+            'icon3Alt': 'Значок-денежный мешочек',
+            'advantage3Title': 'Выгода',
+            'advantage3Text': 'Выгода до 40% при привозе автомобиля с учетом всех налогов и доставок',
+            
+            // Вопросы
+            'questionsTitle': 'FAQ - часто задаваемые вопросы',
+            'question1': 'Какие документы требуются для оформления автомобиля?',
+            'answer1': 'Для таможенного оформления потребуются: <br>Паспорт транспортного средства (PTS) или его иностранный аналог <br>Договор купли-продажи <br>Сертификат соответствия <br>Документы, подтверждающие таможенную очистку <br>Платежные документы об уплате таможенных пошлин',
+            'question2': 'Сколько времени занимает доставка авто из Кореи/Японии/Китая?',
+            'answer2': 'Корея: 25-35 дней <br>Япония: 25-30 дней <br>Китай: 30-45 дней <br>Примечание: Сроки могут увеличиться из-за таможенного оформления',
+            'question3': 'Какие скрытые платежи могут быть при покупке?',
+            'answer3': 'Наша компания проводит максимально прозрачную сделку <br>Но, помимо стоимости авто, учитывайте: <br>Таможенные пошлины (10-15% от стоимости) <br>Утилизационный сбор (3-5%) <br>Сертификация (2-4%) <br>Доставка до вашего города (зависит от региона)',
+            'question4': 'Можно ли проверить машину до оплаты?',
+            'answer4': 'Да! Мы предоставляем: <br>Фото и видеоотчеты (включая пробег, салон, двигатель) <br>Диагностику через OBD-сканер (проверка ошибок) <br>Выездной осмотр при подборе авто',
+            'question5': 'Какие документы я получу?',
+            'answer5': 'Полный пакет: <br>Договор купли-продажи (нотариально заверенный) <br>Инвойс с указанием стоимости <br>Сертификат соответствия ТР ТС <br>Таможенная декларация <br>ПТС российского образца',
+            
+            // Новости
+            'newsTitle': 'Новости',
+            
+            // Отзывы
+            'reviewsTitle': 'Отзывы наших клиентов',
+            'review1': 'Отличный сервис! Быстро, качественно и профессионально. Рекомендую всем своим знакомым. Очень довольна результатом.',
+            'review2': 'Работа выполнена в срок и даже раньше. Качество на высшем уровне. Буду обращаться еще и советовать друзьям.',
+            'review3': 'Приятно удивлена уровнем сервиса. Все вопросы решались оперативно, персонал вежливый и компетентный.',
+            'review4': 'Очень профессиональный подход. Учли все пожелания и предложили оптимальное решение. Спасибо за работу!',
+            'review5': 'Все просто прекрасно! От первого контакта до завершения работы. Обязательно вернусь снова. Лучший сервис в городе!',
+            
+            // Контакты
+            'contactsTitle': 'Контакты',
+            'contactsText1': 'Контакты доступны для связи в Whatsapp, Telegram, а такжу по мобильному телефону',
+            'contactsText2': 'Рабочее время с 9:00 до 18:00 (пн-пт) и с 10:00 до 16:00 (сб-вс)',
+            'contactsText3': 'По Красноярскому времени (+4 часа)',
+            
+            // Калькулятор
+            'calculatorTitle': 'Рассчитайте стоимости авто',
+            'step1Title': 'Выберите страну',
+            'koreaLabel': 'Корея',
+            'japanLabel': 'Япония',
+            'chinaLabel': 'Китай',
+            'nextButton': 'Далее',
+            'step2Title': 'Параметры автомобиля',
+            'engineTypeLabel': 'Тип двигателя',
+            'petrolOption': 'Бензин',
+            'dieselOption': 'Дизель',
+            'electricOption': 'Электро',
+            'dieselHybridOption': 'Дизельный гибрид',
+            'petrolHybridOption': 'Бензиновый гибрид',
+            'priceLabel': 'Стоимость авто',
+            'yearLabel': 'Год выпуска',
+            'ownerTypeLabel': 'Тип владельца',
+            'individualOption': 'Физическое лицо',
+            'legalOption': 'Юридическое лицо',
+            'engineVolumeLabel': 'Объем двигателя, см³',
+            'powerHpLabel': 'Мощность, л.с.',
+            'electricPowerLabel': 'Мощность электро, кВт.',
+            'exchangeRateLabel': 'Курс валюты (руб)',
+            'exchangeRateInfo': 'Текущий курс к рублю',
+            'calculateButton': 'Рассчитать стоимость',
+            'backButton1': 'Назад',
+            'step3Title': 'Результаты расчета',
+            'resultTitle': 'Примерная итоговая стоимость:',
+            'backButton2': 'Вернуться к расчету',
+            
+            // Карта
+            'mapsTitle': 'Мы здесь',
+            
+            // Модальное окно
+            'namePlaceholder': 'Ваше имя:',
+            'phonePlaceholder': 'Ваш телефон:',
+            'cityPlaceholder': 'Ваш город:',
+            'carModelPlaceholder': 'Какой автомобиль интересует:',
+            'budgetPlaceholder': 'Укажите ваш бюджет в рублях',
+            'countrySelectTitle': 'Из какой страны будет автомобиль?',
+            'selectCountryOption': 'Выберите страну',
+            'koreaOption': 'Корея',
+            'chinaOption': 'Китай',
+            'japanOption': 'Япония',
+            'submitButton': 'Отправить заявку'
+          },
+          'by': {
+            // Общие элементы
+            'pageTitle': 'Аўта Край - Прываз аўто з Карэі, Кітая і Японіі',
+            'metaDescription': 'Прываз аўто з Карэі, Кітая і Японіі. Падбор аўтамабіля і дастаўка да вашага горада.',
+            'logoAlt': 'Лагатып Аўта Край',
+            'telegramAlt': 'Лагатып Telegram',
+            'whatsappAlt': 'Лагатып Whatsapp',
+            'instagramAlt': 'Лагатып Instagram',
+            'modalLogoAlt': 'Лагатып Аўта Край',
+            
+            // Навигация
+            'home-link': 'Галоўная',
+            'mobile-home-link': 'Галоўная',
+            'advantages-link': 'Перавагі',
+            'mobile-advantages-link': 'Перавагі',
+            'questions-link': 'Пытанні',
+            'mobile-questions-link': 'Пытанні',
+            'reviews-link': 'Водгукі',
+            'mobile-reviews-link': 'Водгукі',
+            'contacts-link': 'Кантакты',
+            'mobile-contacts-link': 'Кантакты',
+            
+            // Основной контент
+            'coverTitle': 'Аўта Край',
+            'coverSubtitle': 'Аўто з Карэі, Кітая і Японіі',
+            'openFormBtn': 'Замовіць аўто',
+            'openFormBtn2': 'Замовіць аўто',
+            
+            // Преимущества
+            'advantagesTitle': 'Чаму мы',
+            'icon1Alt': 'Значок-спіс спісам',
+            'advantage1Title': 'Агульнае',
+            'advantage1Text': 'Безагановае выкананне працы, шмат задаволеных кліентаў, больш за 20 гадоў на рынку',
+            'icon2Alt': 'Значок-пацверджанне',
+            'advantage2Title': 'Суправаджэнне',
+            'advantage2Text': 'Поўнае суправаджэнне ад афармлення замовы да ўручэння аўтамабіля',
+            'icon3Alt': 'Значок-грашовы мяшок',
+            'advantage3Title': 'Выгада',
+            'advantage3Text': 'Выгада да 40% пры прывозе аўтамабіля з улікам усіх падаткаў і даставак',
+            
+            // Вопросы
+            'questionsTitle': 'FAQ - часта задаваныя пытанні',
+            'question1': 'Якія дакументы патрабуюцца для афармлення аўтамабіля?',
+            'answer1': 'Для мытнага афармлення патрабуюцца: <br>Пашпарт транспартнага сродку (PTS) або яго замежны аналаг <br>Дагавор куплі-продажу <br>Сертыфікат адпаведнасці <br>Дакументы, якія пацвярджаюць мытную ачыстку <br>Плацежныя дакументы аб аплаце мытных пошлін',
+            'question2': 'Колькі часу займае дастаўка аўто з Карэі/Японіі/Кітая?',
+            'answer2': 'Карэя: 25-35 дзён <br>Японія: 25-30 дзён <br>Кітай: 30-45 дзён <br>Заўвага: Тэрміны могуць павялічыцца з-за мытнага афармлення',
+            'question3': 'Якія схаваныя плацяжы могуць быць пры куплі?',
+            'answer3': 'Наша кампанія праводзіць максімальна празрыстую здзелку <br>Але, акрамя кошту аўто, улічвайце: <br>Мытныя пошліны (10-15% ад кошту) <br>Утылізацыйны збор (3-5%) <br>Сертыфікацыя (2-4%) <br>Дастаўка да вашага горада (залежыць ад рэгіёна)',
+            'question4': 'Ці можна праверыць машыну да аплаты?',
+            'answer4': 'Так! Мы прадастаўляем: <br>Фота і відэасправаздачы (уключаючы прабег, салон, рухавік) <br>Дыягностыку праз OBD-сканер (праверка памылак) <br>Выездны агляд пры падборы аўто',
+            'question5': 'Якія дакументы я атрымаю?',
+            'answer5': 'Поўны пакет: <br>Дагавор куплі-продажу (натарыяльна завершаны) <br>Інвойс з указаннем кошту <br>Сертыфікат адпаведнасці ТР ТС <br>Мытная дэкларацыя <br>ПТС расійскага ўзору',
+            
+            // Новости
+            'newsTitle': 'Навіны',
+            
+            // Отзывы
+            'reviewsTitle': 'Водгукі нашых кліентаў',
+            'review1': 'Выдатны сэрвіс! Хутка, якасна і прафесійна. Рэкамендую ўсім сваім знаёмым. Вельмі задаволена вынікам.',
+            'review2': 'Праца выканана ў тэрмін і нават раней. Якасць на вышэйшым узроўні. Буду звяртацца яшчэ і раіць сябрам.',
+            'review3': 'Прыемна здзіўлена ўзроўнем сэрвісу. Усе пытанні вырашаліся аператыўна, персанал ветлівы і кампетэнтны.',
+            'review4': 'Вельмі прафесійны падыход. Улічылі ўсе пажаданні і прапанавалі аптымальнае рашэнне. Дзякуй за працу!',
+            'review5': 'Усё проста цудоўна! Ад першага кантакту да завяршэння працы. Абавязкова вярнуся зноў. Лепшы сэрвіс у горадзе!',
+            
+            // Контакты
+            'contactsTitle': 'Кантакты',
+            'contactsText1': 'Кантакты даступныя для сувязі ў Whatsapp, Telegram, а таксама па мабільным тэлефоне',
+            'contactsText2': 'Рабочы час з 9:00 да 18:00 (пн-пт) і з 10:00 да 16:00 (сб-нд)',
+            'contactsText3': 'Па Краснаярскім часе (+4 гадзіны)',
+            
+            // Калькулятор
+            'calculatorTitle': 'Разлічыце кошт аўтамабіля',
+            'step1Title': 'Выберыце краіну',
+            'koreaLabel': 'Карэя',
+            'japanLabel': 'Японія',
+            'chinaLabel': 'Кітай',
+            'nextButton': 'Далей',
+            'step2Title': 'Параметры аўтамабіля',
+            'engineTypeLabel': 'Тып рухавіка',
+            'petrolOption': 'Бензін',
+            'dieselOption': 'Дызель',
+            'electricOption': 'Электра',
+            'dieselHybridOption': 'Дызельны гібрыд',
+            'petrolHybridOption': 'Бензінавы гібрыд',
+            'priceLabel': 'Кошт аўтамабіля',
+            'yearLabel': 'Год выпуску',
+            'ownerTypeLabel': 'Тып уладальніка',
+            'individualOption': 'Фізічная асоба',
+            'legalOption': 'Юрыдычная асоба',
+            'engineVolumeLabel': 'Аб\'ём рухавіка, см³',
+            'powerHpLabel': 'Магутнасць, к.с.',
+            'electricPowerLabel': 'Магутнасць электра, кВт.',
+            'exchangeRateLabel': 'Курс валюты (руб)',
+            'exchangeRateInfo': 'Бягучы курс да рубля',
+            'calculateButton': 'Разлічыць кошт',
+            'backButton1': 'Назад',
+            'step3Title': 'Вынікі разліку',
+            'resultTitle': 'Прыблізная канчатковая кошт:',
+            'backButton2': 'Вярнуцца да разліку',
+            
+            // Карта
+            'mapsTitle': 'Мы тут',
+            
+            // Модальное окно
+            'namePlaceholder': 'Ваша імя:',
+            'phonePlaceholder': 'Ваш тэлефон:',
+            'cityPlaceholder': 'Ваш горад:',
+            'carModelPlaceholder': 'Які аўтамабіль цікавіць:',
+            'budgetPlaceholder': 'Пазначце ваш бюджэт у рублях',
+            'countrySelectTitle': 'З якой краіны будзе аўтамабіль?',
+            'selectCountryOption': 'Выберыце краіну',
+            'koreaOption': 'Карэя',
+            'chinaOption': 'Кітай',
+            'japanOption': 'Японія',
+            'submitButton': 'Адправіць заяўку'
+          }
+        };
+        
+        // Функция перевода
+        function translatePage(lang) {
+          // Устанавливаем атрибут lang у html
+          document.getElementById('htmlLang').setAttribute('lang', lang);
+          
+          // Переводим все элементы с data-translate
+          for (const key in translations[lang]) {
+            const elements = document.querySelectorAll(`[id="${key}"]`);
+            elements.forEach(element => {
+              if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+              } else if (element.tagName === 'META') {
+                element.content = translations[lang][key];
+              } else if (element.tagName === 'TITLE') {
+                element.textContent = translations[lang][key];
+              } else if (element.hasAttribute('alt')) {
+                element.alt = translations[lang][key];
+              } else {
+                element.innerHTML = translations[lang][key];
+              }
+            });
+          }
+        }
+        
+        // Обработчик переключения языка
+        langToggle.addEventListener('click', function() {
+          currentLang = currentLang === 'ru' ? 'by' : 'ru';
+          translatePage(currentLang);
+          langToggle.textContent = currentLang === 'ru' ? 'BY' : 'RU';
+        });
+        
+        // Инициализация языка
+        translatePage(currentLang);
+      });

@@ -367,15 +367,205 @@ header.shrink .header__logo-image {
   z-index: 9;
 }
 
-.news-container {
+.news-section {
   display: flex;
   flex-direction: column;
   max-width: 75%;
   margin: 10% auto 10% auto;
-  padding: 0 20px;
-  z-index: 9;
+  z-index: 8;
 }
 
+.news__container {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  background: rgba(113, 113, 113, 0.5);
+  border-radius: 15px;
+  gap: 15px;
+}
+
+.news__container-section {
+  background-color: #676767;
+  padding: 2% ;
+  border-radius: 15px;
+}
+
+.news__container-footer {
+  align-self: center;
+}
+
+.news__title {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.news__accent {
+  color: #bcfd4c;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.news__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.steps-carousel-section {
+  padding: 60px 0;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.steps-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.steps-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.step-card {
+  scroll-snap-align: start;
+  flex: 0 0 300px;
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(113, 113, 113, 0.5); 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  position: relative;
+  margin-right: 20px;
+  transition: transform 0.3s;
+}
+
+.step-card:last-child {
+  margin-right: 0;
+}
+
+.step-number {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: #bcfd4c;
+  color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.step-icon {
+  margin-bottom: 15px;
+}
+
+.step-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #bcfd4c;
+}
+
+.step-desc p {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.step-features {
+  text-align: left;
+  padding-left: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.step-features li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.step-features li:before {
+  content: "•";
+  color: #bcfd4c;
+  position: absolute;
+  left: -15px;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.carousel-prev, .carousel-next {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel-dots button.active {
+  background: #bcfd4c;
+}
+
+.steps-cta {
+  text-align: center;
+}
+
+.btn-primary {
+  background: #bcfd4c;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #bcfd4c;
+}
+
+.steps-warranty {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  font-size: 14px;
+}
 
 .reviews-section {
   display: flex;
@@ -489,7 +679,6 @@ header.shrink .header__logo-image {
 .carousel-btn:hover svg {
   fill: #bcfd4c;
 }
-
 
 .section-container {
   position: relative;
@@ -1141,4 +1330,28 @@ body.modal-open {
 
 .mobile-nav__list-item-link:hover {
   color: #bcfd4c;
+}
+
+@media (min-width: 768px) {
+  .step-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .step-card {
+    flex: 0 0 calc(25% - 20px);
+  }
+  .steps-carousel {
+    overflow-x: visible;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .step-card {
+    margin-right: 0;
+  }
+  .carousel-nav {
+    display: none;
+  }
 }
